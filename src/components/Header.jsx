@@ -18,9 +18,9 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 120 }}
-      className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg"
+      className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl fixed w-full z-50"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="text-2xl font-bold">
             Indian Webify
