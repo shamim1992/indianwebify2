@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
-
 const OurWorkSection = () => {
   const portfolioItems = [
     { title: 'E-commerce Platform', image: 'https://picsum.photos/seed/ecommerce/300/200' },
@@ -26,6 +24,13 @@ const OurWorkSection = () => {
     autoplaySpeed: 3000,
     responsive: [
       {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
@@ -33,7 +38,7 @@ const OurWorkSection = () => {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -43,9 +48,10 @@ const OurWorkSection = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Our Work</h2>
+    <section className="py-10 sm:py-16 md:py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">Our Work</h2>
+        <div className="max-w-6xl mx-auto">
           <Slider {...sliderSettings}>
             {portfolioItems.map((item, index) => (
               <motion.div 
@@ -55,11 +61,13 @@ const OurWorkSection = () => {
                 transition={{ delay: index * 0.2 }}
                 className="px-2"
               >
-                <div className="card my-2 shadow-xl overflow-hidden">
-                  <figure><img src={item.image} alt={item.title} className="w-full h-48 object-cover" /></figure>
-                  <div className="card-body">
-                    <h2 className="card-title">{item.title}</h2>
-                    <div className="card-actions justify-end">
+                <div className="card bg-base-100 shadow-xl overflow-hidden h-full">
+                  <figure className="relative h-48 sm:h-56">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                  </figure>
+                  <div className="card-body p-4 sm:p-6">
+                    <h2 className="card-title text-lg sm:text-xl">{item.title}</h2>
+                    <div className="card-actions justify-end mt-2 sm:mt-4">
                       <button className="btn btn-primary btn-sm">View Details</button>
                     </div>
                   </div>
@@ -68,7 +76,8 @@ const OurWorkSection = () => {
             ))}
           </Slider>
         </div>
-      </section>
+      </div>
+    </section>
   );
 };
 

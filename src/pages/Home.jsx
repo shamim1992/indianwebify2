@@ -87,7 +87,7 @@ const Home = () => {
 
       {/* Portfolio Showcase */}
       
-<OurWorkSection/>
+{/* <OurWorkSection/> */}
       {/* Testimonials */}
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
