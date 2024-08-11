@@ -9,7 +9,7 @@
 
 // const Home = () => {
 //     return (
-     
+
 //         <div>
 //             <HeroSection />
 //             <ServicesSection />
@@ -28,109 +28,69 @@ import { Link } from 'react-router-dom';
 import ServicesSection from '../components/ServicesSection';
 import OurWorkSection from '../components/OurWorkSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import HeroSection from '../components/HeroSection';
 
 
 
 const Home = () => {
-  
 
-
-
-  const teamMembers = [
-    { name: 'Arjun Sharma', role: 'Founder & CEO', image: 'https://picsum.photos/seed/arjun/200' },
-    { name: 'Priya Patel', role: 'Lead Developer', image: 'https://picsum.photos/seed/priya/200' },
-    { name: 'Rahul Gupta', role: 'UX Designer', image: 'https://picsum.photos/seed/rahul/200' },
-  ];
 
   return (
-    <div className="home">
+    <div className="home font-sans">
       {/* Hero Section */}
-      <motion.section 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="hero min-h-screen bg-gradient-to-r from-purple-600 to-indigo-600 text-white"
-      >
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <motion.h1 
-              initial={{ y: -50 }}
-              animate={{ y: 0 }}
-              transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
-              className="text-5xl font-bold mb-8"
-            >
-              Welcome to Indian Webify
-            </motion.h1>
-            <motion.p 
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="py-6 text-lg"
-            >
-              Transforming ideas into powerful web solutions. We craft stunning websites and robust web applications tailored to your needs.
-            </motion.p>
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn btn-secondary btn-lg"
-            >
-              Get Started
-            </motion.button>
-          </div>
-        </div>
-      </motion.section>
+    
+      <HeroSection />
 
       {/* Services Overview */}
-     <ServicesSection/>
+      <ServicesSection />
 
       {/* Portfolio Showcase */}
-      
-<OurWorkSection/>
+
+      <OurWorkSection />
       {/* Testimonials */}
-      
-<TestimonialsSection/>
+
+      <TestimonialsSection />
       {/* Team Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div 
-                key={member.name}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="card bg-base-100 shadow-xl"
+     
+
+
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+          {/* Left Side: Image or Graphic */}
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <div className="relative">
+              <img
+                src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Project Visualization"
+                className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md mx-auro"
+              />
+              {/* Optional overlay or badge */}
+              <div className="absolute top-4 left-4 bg-indigo-600 px-4 py-2 rounded-full shadow-md">
+                <span className="text-sm font-semibold">New Project</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side: Text and Button */}
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-5xl font-extrabold mb-6 leading-tight">
+              Ready to Start <span className="text-indigo-500">Your Project?</span>
+            </h2>
+            <p className="mb-8 text-lg md:text-xl text-gray-300">
+              We're excited to help you bring your vision to life. Reach out today to get started with a free consultation.
+            </p>
+            <Link to="/contact">
+              <button className=" bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg text-lg shadow-lg"
               >
-                <figure className="px-10 pt-10">
-                  <img src={member.image} alt={member.name} className="rounded-full w-32 h-32 object-cover" />
-                </figure>
-                <div className="card-body items-center text-center">
-                  <h2 className="card-title">{member.name}</h2>
-                  <p>{member.role}</p>
-                </div>
-              </motion.div>
-            ))}
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to start your project?</h2>
-          <p className="mb-8 text-xl">Let's turn your vision into reality. Contact us today for a free consultation.</p>
-          <Link to="/contact">
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn btn-secondary btn-lg"
-            >
-              Contact Us
-            </motion.button>
-          </Link>
-        </div>
-      </section>
     </div>
   );
 };

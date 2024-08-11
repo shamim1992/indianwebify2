@@ -18,9 +18,9 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 120 }}
-      className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl fixed w-full z-50"
+      className=" shadow-xl relative w-full  bg-base-100 z-50"
     >
-      <div className="container mx-auto px-4 ">
+      <div className="container mx-auto px-4  z-50 w-full">
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="text-2xl font-bold">
             Indian Webify
@@ -34,17 +34,18 @@ const Header = () => {
               >
                 <Link
                   to={item.path}
-                  className="hover:text-gray-300 transition duration-300"
+                  className=" transition duration-300"
                 >
                   {item.name}
                 </Link>
               </motion.div>
             ))}
+            <input type="checkbox" value="black" className="toggle theme-controller" />
           </nav>
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white focus:outline-none"
+              className=" focus:outline-none"
             >
               <svg
                 className="h-6 w-6 fill-current"

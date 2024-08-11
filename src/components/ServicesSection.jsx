@@ -53,9 +53,9 @@ const ServicesSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-100 to-white">
+    <section className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Our <span className="text-indigo-500">Services</span></h2>
         
         <div className="flex flex-wrap justify-center mb-8">
           {services.map((service, index) => (
@@ -65,7 +65,7 @@ const ServicesSection = () => {
               className={`px-4 py-2 m-2 rounded-full transition-colors duration-300 ${
                 activeTab === index
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  : 'btn-outline btn-blue-500 text-gray-700 hover:bg-gray-300'
               }`}
             >
               {service.category}
@@ -80,11 +80,11 @@ const ServicesSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-white rounded-lg shadow-md p-8"
+            className=" rounded-lg  p-8"
           >
             <div className="text-center mb-8 flex justify-start gap-6">
-              {services[activeTab].icon}
-              <span className="text-2xl font-semibold">{services[activeTab].category}</span>
+             <span className='text-blue-500'>{services[activeTab].icon}</span> 
+              <span className="text-2xl font-semibold text-blue-500">{services[activeTab].category}</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {services[activeTab].items.map((item, index) => (
@@ -93,10 +93,10 @@ const ServicesSection = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-gray-100 rounded-lg p-4 hover:shadow-md transition-shadow duration-300"
+                  className=" rounded-lg p-4 hover:shadow-md transition-shadow duration-300 shadow-md "
                 >
-                  <h4 className="font-semibold mb-2">{item.title}</h4>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  <h4 className=" mb-2 text-blue-500 font-bold">{item.title}</h4>
+                  <p className="text-sm text-gray-600 cursor-pointer">{item.description}</p>
                 </motion.div>
               ))}
             </div>

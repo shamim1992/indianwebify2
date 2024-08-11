@@ -17,9 +17,9 @@ const OurWorkSection = () => {
   const visibleItems = showAll ? portfolioItems : portfolioItems.slice(0, 3);
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 ">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Our Work</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Our <span className="text-indigo-500">Work</span> </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence>
             {visibleItems.map((item, index) => (
@@ -29,12 +29,12 @@ const OurWorkSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className=" rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="relative group">
                   <img src={item.image} alt={item.title} className="w-full h-64 object-cover" />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="bg-white text-black py-2 px-4 rounded-full hover:bg-opacity-80 transition-colors duration-300">
+                    <button className=" text-black py-2 px-4 rounded-full hover:bg-opacity-80 transition-colors duration-300">
                       View More
                     </button>
                   </div>
@@ -52,7 +52,7 @@ const OurWorkSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition-colors duration-300"
+              className="bg-blue-500 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition-colors duration-300"
               onClick={() => setShowAll(true)}
             >
               View All Projects

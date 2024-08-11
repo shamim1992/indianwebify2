@@ -61,13 +61,13 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-100 to-white">
+    <section className="py-10 ">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Clients <span className="text-indigo-500">Feedback</span> </h2>
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <div key={index} className="p-4 md:p-6">
-              <div className="bg-white shadow-xl rounded-lg p-6">
+              <div className=" shadow-md rounded-lg p-6">
                 <p className="text-lg italic mb-4">"{testimonial.text}"</p>
                 <div className="flex items-center mb-4">
                   <div className="flex text-yellow-400">

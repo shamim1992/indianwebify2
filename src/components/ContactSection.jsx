@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const ContactSection = () => {
   return (
-    <div className="p-10 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-center">
+    <div className="p-10  text-center">
       <motion.div
         className="max-w-lg mx-auto"
         initial={{ opacity: 0, y: 100 }}
