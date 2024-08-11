@@ -27,16 +27,14 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ServicesSection from '../components/ServicesSection';
 import OurWorkSection from '../components/OurWorkSection';
+import TestimonialsSection from '../components/TestimonialsSection';
 
 
 
 const Home = () => {
   
 
-  const testimonials = [
-    { name: 'John Doe', company: 'Tech Corp', text: 'Indian Webify delivered an outstanding website that exceeded our expectations.' },
-    { name: 'Jane Smith', company: 'Design Studio', text: 'Their teams creativity and technical expertise are unmatched. Highly recommended!' },
-  ];
+
 
   const teamMembers = [
     { name: 'Arjun Sharma', role: 'Founder & CEO', image: 'https://picsum.photos/seed/arjun/200' },
@@ -89,29 +87,8 @@ const Home = () => {
       
 <OurWorkSection/>
       {/* Testimonials */}
-      <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div 
-                key={testimonial.name}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.5 }}
-                className="card bg-white shadow-xl"
-              >
-                <div className="card-body">
-                  <p className="mb-4 text-lg italic">"{testimonial.text}"</p>
-                  <h3 className="font-bold">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-600">{testimonial.company}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
+<TestimonialsSection/>
       {/* Team Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">

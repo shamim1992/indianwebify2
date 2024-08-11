@@ -35,7 +35,7 @@ const OurWorkSection = () => {
                   <img src={item.image} alt={item.title} className="w-full h-64 object-cover" />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button className="bg-white text-black py-2 px-4 rounded-full hover:bg-opacity-80 transition-colors duration-300">
-                      View Project
+                      View More
                     </button>
                   </div>
                 </div>
