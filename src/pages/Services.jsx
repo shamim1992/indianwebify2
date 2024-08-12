@@ -64,9 +64,9 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen  bg-[#101827] text-gray-400">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white py-20">
+      <section className="bg-black text-gray-400 py-20">
         <div className="container mx-auto px-4">
           <motion.h1
             className="text-4xl md:text-5xl font-bold mb-4 text-center"
@@ -85,13 +85,13 @@ const Services = () => {
       </section>
 
       {/* Service Categories Section */}
-      <div className="container mx-auto py-12 px-4">
+      <div className="container mx-auto py-12 px-4 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`p-6 rounded-lg shadow-lg transition-transform duration-300 transform ${
-                activeCategory === index ? 'bg-white scale-105' : 'bg-blue-100'
+              className={`p-6 cursor-pointer rounded-lg shadow-lg transition-transform duration-300 transform ${
+                activeCategory === index ? 'bg-black text-gray-400 scale-105 border border-gray-400' : 'bg-black text-gray-400 scale-105 border border-gray-400'
               }`}
               onClick={() => toggleCategory(index)}
             >
@@ -106,9 +106,9 @@ const Services = () => {
 
       {/* Service Details Section */}
       {activeCategory !== null && (
-        <div className="container mx-auto py-12 px-4">
+        <div className="container mx-auto py-12 px-4 bg-[#101827] text-gray-400">
           <motion.div
-            className="bg-white p-8 rounded-lg shadow-lg"
+            className="bg-black text-gray-400 p-8 rounded-lg shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -118,9 +118,9 @@ const Services = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services[activeCategory].items.map((item, idx) => (
-                <div key={idx} className="text-left">
+                <div key={idx} className="text-left border border-gray-400 p-5 rounded-2xl text-gray-300">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-gray-700">{item.description}</p>
+                  <p className="mt-2 text-gray-400">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -128,18 +128,7 @@ const Services = () => {
         </div>
       )}
 
-      {/* Call to Action */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 py-12 mt-16 text-center">
-        <motion.a
-          href="/contact"
-          className="btn btn-primary btn-lg"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.2 }}
-        >
-          Contact Us
-        </motion.a>
-      </div>
+   
     </div>
   );
 };

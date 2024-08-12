@@ -53,7 +53,7 @@ const ServicesSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Our <span className="text-indigo-500">Services</span></h2>
         
@@ -65,7 +65,7 @@ const ServicesSection = () => {
               className={`px-4 py-2 m-2 rounded-full transition-colors duration-300 ${
                 activeTab === index
                   ? 'bg-blue-600 text-white'
-                  : 'btn-outline btn-blue-500 text-gray-700 hover:bg-gray-300'
+                  : 'btn-outline btn-blue-500 text-gray-400 hover:bg-gray-300'
               }`}
             >
               {service.category}
@@ -93,10 +93,10 @@ const ServicesSection = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className=" rounded-lg p-4 hover:shadow-md transition-shadow duration-300 shadow-md "
+                  className=" rounded-lg p-4  transition-shadow duration-300 border-2 border-[#595f82] "
                 >
                   <h4 className=" mb-2 text-blue-500 font-bold">{item.title}</h4>
-                  <p className="text-sm text-gray-600 cursor-pointer">{item.description}</p>
+                  <p className="text-sm text-gray-300 cursor-pointer">{item.description}</p>
                 </motion.div>
               ))}
             </div>
