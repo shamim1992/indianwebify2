@@ -1,26 +1,4 @@
-// src/pages/Home.jsx
-// import React from 'react';
-// import { motion } from 'framer-motion';
-// import HeroSection from '../components/HeroSection';
-// import ServicesSection from '../components/ServicesSection';
-// import OurWorkSection from '../components/OurWorkSection';
-// import TestimonialsSection from '../components/TestimonialsSection';
-// import ContactSection from '../components/ContactSection';
 
-// const Home = () => {
-//     return (
-
-//         <div>
-//             <HeroSection />
-//             <ServicesSection />
-//             <OurWorkSection />
-//             <TestimonialsSection />
-//             <ContactSection />
-//         </div>
-//     );
-// };
-
-// export default Home;
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -75,7 +53,7 @@ const Home = () => {
 
           {/* Right Side: Text and Button */}
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-5xl font-extrabold mb-6 leading-tight">
+            <h2 className="text-3xl font-extrabold mb-6 leading-tight">
               Ready to Start <span className="text-indigo-500">Your Project?</span>
             </h2>
             <p className="mb-8 text-lg md:text-xl text-gray-300">

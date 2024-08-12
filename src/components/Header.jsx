@@ -18,7 +18,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 120 }}
-      className=" shadow-xl relative w-full  bg-base-100 z-50"
+      className=" shadow-xl relative w-full   z-50 bg-[#101827] text-white border-base-300 border-b"
     >
       <div className="container mx-auto px-4  z-50 w-full">
         <div className="flex justify-between items-center py-4">
@@ -40,7 +40,7 @@ const Header = () => {
                 </Link>
               </motion.div>
             ))}
-            <input type="checkbox" value="black" className="toggle theme-controller" />
+            {/* <input type="checkbox" value="black" className="toggle theme-controller" /> */}
           </nav>
           <div className="md:hidden">
             <button

@@ -55,13 +55,13 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <div className='min-h-screen relative overflow-hidden z-0 bg-no-repeat bg-cover 'style={{ backgroundImage: `url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')` }}>
+    <div className='min-h-screen relative overflow-hidden z-0 bg-no-repeat bg-cover bg-fixed'style={{ backgroundImage: `url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')` }}>
       <div className='herodesign relative h-[800px] -left-96 lg:-left-40 w-[300px] rounded-3xl   bg-blue-500 rotate-45  overflow-hidden -top-48 lg:-top-60'></div>
       <div className='herodesign absolute -bottom-60 -right-96 lg:-right-44 h-[800px] w-[300px] rounded-3xl -z-20 bg-blue-500 rotate-45 overflow-hidden'></div>
       <div className='flex flex-col lg:flex-row justify-center items-center absolute inset-0 mt-6'>
         <div className='flex flex-col justify-center items-center p-10 lg:p-24 mt-24 lg:mt-0 glass lg:w-[50%] text-white rounded-3xl '>
           <h1 className='text-2xl lg:text-4xl text-center font-extrabold'>Welcome to Indian Webify</h1>
-          <p className='lg:px-24 mt-6 px-4'>Transforming ideas into powerful web solutions. We craft stunning websites and robust web applications tailored to your needs.</p>
+          <p className='lg:px-0 text-center mt-6 px-4'>Transforming ideas into powerful web solutions. We craft stunning websites and robust web applications tailored to your needs.</p>
           <div className='flex justify-center items-center gap-4'>
           <button className='bg-blue-500 hover:bg-indigo-500 mt-10 px-4 py-2 rounded-3xl text-white font-bold'>Appointment</button>
           <button className='hover:bg-blue-500 bg-indigo-500 mt-10 px-4 py-2 rounded-3xl text-white font-bold'>About Us</button>

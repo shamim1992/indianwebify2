@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const OurWorkSection = () => {
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
 
   const portfolioItems = [
     { title: 'E-commerce Platform', image: 'https://picsum.photos/seed/ecommerce/400/300', category: 'Web Development' },
@@ -17,7 +17,7 @@ const OurWorkSection = () => {
   const visibleItems = showAll ? portfolioItems : portfolioItems.slice(0, 3);
 
   return (
-    <section className="py-16 ">
+    <section className="py-6 bg-[#101827] text-white border-base-300 border-t">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Our <span className="text-indigo-500">Work</span> </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -29,7 +29,7 @@ const OurWorkSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className=" rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className=" rounded-lg overflow-hidden border-2 border-[#595f82]"
               >
                 <div className="relative group">
                   <img src={item.image} alt={item.title} className="w-full h-64 object-cover" />

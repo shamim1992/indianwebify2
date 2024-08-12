@@ -13,7 +13,7 @@ const AboutUs = () => {
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
+      <section className="bg-black text-gray-400 py-20">
         <div className="container mx-auto px-4">
           <motion.h1 
             className="text-4xl md:text-5xl font-bold mb-4 text-center"
@@ -32,7 +32,7 @@ const AboutUs = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-16">
+      <section className="py-16  bg-[#101827] text-gray-400 ">
         <div className="container mx-auto px-4">
           <motion.h2 
             className="text-3xl font-bold mb-8 text-center"
@@ -41,14 +41,14 @@ const AboutUs = () => {
             Our Story
           </motion.h2>
           <motion.p 
-            className="text-lg mb-6 max-w-3xl mx-auto"
+            className="text-lg mb-6 max-w-4xl mx-auto"
             {...fadeIn}
             transition={{ delay: 0.2 }}
           >
             Founded in 2015, Indian Webify began as a small team of passionate developers with a vision to transform the digital landscape for businesses across India. Over the years, we've grown into a full-service web development company, serving clients from startups to established enterprises.
           </motion.p>
           <motion.p 
-            className="text-lg max-w-3xl mx-auto"
+            className="text-lg max-w-4xl mx-auto"
             {...fadeIn}
             transition={{ delay: 0.3 }}
           >
@@ -58,7 +58,7 @@ const AboutUs = () => {
       </section>
 
       {/* Our Values */}
-      <section className="bg-white py-16">
+      <section className=" py-16 bg-[#101827] text-gray-400 ">
         <div className="container mx-auto px-4">
           <motion.h2 
             className="text-3xl font-bold mb-12 text-center"
@@ -75,12 +75,12 @@ const AboutUs = () => {
             ].map((value, index) => (
               <motion.div 
                 key={value.title}
-                className="text-center"
+                className="text-center border-2 border-gray-600 p-6 rounded-2xl"
                 {...fadeIn}
                 transition={{ delay: 0.1 * index }}
               >
-                <div className="text-4xl mb-4 text-blue-600">{value.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+                <div className="text-4xl mb-4 text-gray-300 flex justify-start gap-3">{value.icon} <span className="text-xl font-semibold mb-2">{value.title}</span></div>
+                
                 <p>{value.description}</p>
               </motion.div>
             ))}
@@ -89,7 +89,7 @@ const AboutUs = () => {
       </section>
 
       {/* Our Expertise */}
-      <section className="py-16">
+      <section className="py-16 bg-[#101827] text-gray-400 ">
         <div className="container mx-auto px-4">
           <motion.h2 
             className="text-3xl font-bold mb-8 text-center"
@@ -117,7 +117,7 @@ const AboutUs = () => {
             ].map((service, index) => (
               <motion.div 
                 key={service}
-                className="bg-gray-200 rounded-lg p-4"
+                className="bg-black text-center rounded-lg p-4"
                 {...fadeIn}
                 transition={{ delay: 0.1 * index }}
               >
@@ -129,7 +129,7 @@ const AboutUs = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-[#101827] text-gray-400  py-16">
         <div className="container mx-auto px-4 text-center">
           <motion.h2 
             className="text-3xl font-bold mb-4"
@@ -145,7 +145,7 @@ const AboutUs = () => {
             Let's collaborate to bring your digital vision to life.
           </motion.p>
           <motion.button 
-            className="bg-white text-blue-600 py-2 px-6 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300"
+            className="bg-blue-500 text-gray-300 py-2 px-6 rounded-full text-lg font-semibold hover:bg-blue-600 transition duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
