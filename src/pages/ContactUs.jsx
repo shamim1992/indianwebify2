@@ -35,9 +35,9 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <FaPhoneAlt className="text-3xl mb-4 text-indigo-500" />
+              <FaPhoneAlt className="text-3xl mb-4 text-indigo-500 mx-auto" />
               <h3 className="text-xl font-semibold">Phone</h3>
-              <p className="mt-2 text-gray-400">+1 (123) 456-7890</p>
+              <p className="mt-2 text-gray-400">+91 8050741797</p>
             </motion.div>
 
             <motion.div
@@ -47,7 +47,7 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <FaEnvelope className="text-3xl mb-4 text-indigo-500" />
+              <FaEnvelope className="text-3xl mb-4 text-indigo-500 mx-auto" />
               <h3 className="text-xl font-semibold">Email</h3>
               <p className="mt-2 text-gray-400">contact@indianwebify.com</p>
             </motion.div>
@@ -59,9 +59,9 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <FaMapMarkerAlt className="text-3xl mb-4 text-indigo-500" />
+              <FaMapMarkerAlt className="text-3xl mb-4 text-indigo-500 mx-auto" />
               <h3 className="text-xl font-semibold">Address</h3>
-              <p className="mt-2 text-gray-400">123 Webify St, New Delhi, India</p>
+              <p className="mt-2 text-gray-400">Dinnur main Road, Bengaluru, India</p>
             </motion.div>
           </div>
 
