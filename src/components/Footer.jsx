@@ -28,7 +28,7 @@ const Footer = () => {
                 <aside className="grid-flow-col items-center">
                   
                     <p>
-                       Copyright @ 2024, Indian Webify.
+                       Copyright @ 2024, Indian Webify
                         <br />
                        
                     </p>

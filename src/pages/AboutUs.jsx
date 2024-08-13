@@ -29,6 +29,7 @@ const AboutUs = () => {
             Empowering businesses with cutting-edge web solutions since 2015
           </motion.p>
         </div>
+        
       </section>
 
       {/* Our Story */}
