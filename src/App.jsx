@@ -10,19 +10,22 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Footer from './components/Footer';
+import ContactUs from './pages/ContactUs';
+import OurWork from './pages/OurWork';
 
 function App() {
   return (
     <Router>
-      <Header/>
+      <Header />
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<AboutUs />} /> 
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
-        {/* <Route path="/work" element={<OurWork />} />
-        <Route path="/contact" element={<ContactUs />} />  */}
+        <Route path="/our-work" element={<OurWork />} />
+        <Route path="/contact" element={<ContactUs />} />
+
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }
