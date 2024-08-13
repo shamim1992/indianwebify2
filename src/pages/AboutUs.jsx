@@ -19,7 +19,7 @@ const AboutUs = () => {
             className="text-4xl md:text-5xl font-bold mb-4 text-center"
             {...fadeIn}
           >
-            About Indian Webify
+            About Us
           </motion.h1>
           <motion.p 
             className="text-xl text-center max-w-3xl mx-auto"
