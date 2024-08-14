@@ -1,3 +1,6 @@
+
+
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaDesktop, FaMobileAlt, FaSearchDollar, FaCogs } from 'react-icons/fa';
@@ -55,7 +58,14 @@ const ServicesSection = () => {
   return (
     <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Our <span className="text-indigo-500">Services</span></h2>
+        <motion.h2
+          className="text-4xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Our <span className="text-indigo-500">Services</span>
+        </motion.h2>
         
         <div className="flex flex-wrap justify-center mb-8">
           {services.map((service, index) => (
@@ -80,10 +90,10 @@ const ServicesSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className=" rounded-lg  p-8"
+            className="rounded-lg p-8"
           >
             <div className="text-center mb-8 flex justify-start gap-6">
-             <span className='text-blue-500'>{services[activeTab].icon}</span> 
+              <span className='text-blue-500'>{services[activeTab].icon}</span> 
               <span className="text-2xl font-semibold text-blue-500">{services[activeTab].category}</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -93,9 +103,10 @@ const ServicesSection = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className=" rounded-lg p-4  transition-shadow duration-300 border-2 border-[#595f82] "
+                  whileHover={{ scale: 1.05, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)' }}
+                  className="rounded-lg p-4 transition-shadow duration-300 border-2 border-[#595f82]"
                 >
-                  <h4 className=" mb-2 text-blue-500 font-bold">{item.title}</h4>
+                  <h4 className="mb-2 text-blue-500 font-bold">{item.title}</h4>
                   <p className="text-sm text-gray-300 cursor-pointer">{item.description}</p>
                 </motion.div>
               ))}
@@ -108,3 +119,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+

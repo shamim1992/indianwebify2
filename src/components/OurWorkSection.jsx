@@ -1,17 +1,23 @@
 // src/components/OurWorkSection.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ecom from '../assets/ecommerce.png'
+import hospital from '../assets/hospital.png'
+import banking from '../assets/banking.png'
+import fitness from '../assets/fitness.png'
+import restaurant from '../assets/restaurant.png'
+import lms from '../assets/lms.png'
 
 const OurWorkSection = () => {
   const [showAll, setShowAll] = useState(true);
 
   const portfolioItems = [
-    { title: 'E-commerce Platform', image: 'https://picsum.photos/seed/ecommerce/400/300', category: 'Web Development' },
-    { title: 'Social Media Dashboard', image: 'https://picsum.photos/seed/dashboard/400/300', category: 'UI/UX Design' },
-    { title: 'Mobile Banking App', image: 'https://picsum.photos/seed/banking/400/300', category: 'Mobile App' },
-    { title: 'Fitness Tracking App', image: 'https://picsum.photos/seed/fitness/400/300', category: 'Mobile App' },
-    { title: 'Online Learning Platform', image: 'https://picsum.photos/seed/learning/400/300', category: 'Web Development' },
-    { title: 'Restaurant Booking System', image: 'https://picsum.photos/seed/restaurant/400/300', category: 'Web Development' },
+    { title: 'E-commerce Platform', image: ecom, category: 'Web Development' },
+    { title: 'Hospital Manager', image: hospital, category: 'Web Development' },
+    { title: 'Mobile Banking App', image: banking, category: 'Mobile App' },
+    { title: 'Fitness Tracking App', image: fitness, category: 'Mobile App' },
+    { title: 'Online Learning Platform', image: lms, category: 'Web Development' },
+    { title: 'Restaurant Booking System', image: restaurant, category: 'Web Development' },
   ];
 
   const visibleItems = showAll ? portfolioItems : portfolioItems.slice(0, 3);

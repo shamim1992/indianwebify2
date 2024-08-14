@@ -1,31 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ecom from '../assets/ecommerce.png'
+import hospital from '../assets/hospital.png'
+import banking from '../assets/banking.png'
+import fitness from '../assets/fitness.png'
+import restaurant from '../assets/restaurant.png'
+import lms from '../assets/lms.png'
+
 
 const projects = [
   {
     title: 'E-commerce Website',
     description: 'A sleek and modern e-commerce platform with advanced features and a user-friendly interface.',
-    image: 'ecommerce.jpg',
+    image: ecom,
   },
   {
     title: 'Hospital Management System',
     description: 'A comprehensive system to manage hospital operations, from patient care to administration.',
-    image: 'hospital.jpg',
+    image: hospital,
   },
   {
     title: 'Billing Software',
     description: 'An efficient billing system that streamlines invoicing, payment tracking, and financial management.',
-    image: 'billing.jpg',
+    image: banking,
   },
   {
-    title: 'Social Media App',
-    description: 'A feature-rich social media application with real-time messaging and community features.',
-    image: 'social-media.jpg',
+    title: 'Fitness Tracking App',
+    description: 'A feature-rich social media application with real-time fitness tracking features.',
+    image: fitness,
   },
   {
-    title: 'AI Chatbot',
+    title: 'Restaurant Management System',
     description: 'An AI-powered chatbot for customer service, lead generation, and user interaction.',
-    image: 'chatbot.jpg',
+    image: restaurant,
   },
 ];
 
@@ -62,7 +69,7 @@ const OurWork = () => {
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
             <img
-              src={`/images/${project.image}`}
+              src={project.image}
               alt={project.title}
               className="w-full h-48 object-cover opacity-75"
             />
