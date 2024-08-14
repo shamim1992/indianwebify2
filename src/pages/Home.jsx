@@ -37,22 +37,10 @@ const Home = () => {
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
           {/* Left Side: Image or Graphic */}
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Project Visualization"
-                className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md mx-auro"
-              />
-              {/* Optional overlay or badge */}
-              <div className="absolute top-4 left-4 bg-indigo-600 px-4 py-2 rounded-full shadow-md">
-                <span className="text-sm font-semibold">New Project</span>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Right Side: Text and Button */}
-          <div className="md:w-1/2 text-center md:text-left">
+          <div className="mx-auto text-center">
             <h2 className="text-3xl font-extrabold mb-6 leading-tight">
               Ready to Start <span className="text-indigo-500">Your Project?</span>
             </h2>
