@@ -24,7 +24,7 @@ const HeroSection = () => {
       ></motion.div>
 
       {/* Main content */}
-      <div className="flex flex-col lg:flex-row justify-center items-center absolute inset-0 mt-6">
+      <div className="flex flex-col lg:flex-row justify-center items-center absolute -top-10 inset-0 lg:mt-6">
         <motion.div
           className="flex flex-col justify-center items-center p-10 lg:p-24 mt-24 lg:mt-0 glass lg:w-[50%] text-white rounded-3xl"
           initial={{ opacity: 0, y: 50 }}
