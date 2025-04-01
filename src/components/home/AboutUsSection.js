@@ -77,7 +77,7 @@ const AboutUsSection = () => {
               {...fadeIn}
               transition={{ delay: 0.3 }}
             >
-              Founded with a vision to empower businesses through technology, we've grown into a team of passionate professionals committed to excellence in every project we undertake. Our approach blends cutting-edge technology with strategic insights to create digital solutions that stand out in today's competitive landscape.
+              Founded with a vision to empower businesses through technology, we have grown into a team of passionate professionals committed to excellence in every project we undertake. Our approach blends cutting-edge technology with strategic insights to create digital solutions that stand out in todays competitive landscape.
             </motion.p>
             
             {/* Stats Row */}

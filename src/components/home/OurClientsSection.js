@@ -24,7 +24,7 @@ const OurClientsSection = () => {
       company: 'TechStartup India',
       image: '/client1.jpg', // Replace with actual image path
       stars: 5,
-      text: 'Indian Webify transformed our online presence completely. Their team delivered a website that exceeded our expectations in both design and functionality. The e-commerce integration was seamless, and we\'ve seen a 40% increase in online sales since launch.'
+      text: 'Indian Webify transformed our online presence completely. Their team delivered a website that exceeded our expectations in both design and functionality. The e-commerce integration was seamless, and we have seen a 40% increase in online sales since launch.'
     },
     {
       id: 2,
