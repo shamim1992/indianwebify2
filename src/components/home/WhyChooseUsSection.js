@@ -1,0 +1,123 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle, Award, Clock, ThumbsUp, Users, Shield } from 'lucide-react';
+
+const advantages = [
+  {
+    title: 'Expertise & Experience',
+    icon: <Award className="text-4xl mb-4" />,
+    description: 'Our team brings years of industry experience and technical expertise to every project, ensuring high-quality solutions tailored to your specific needs.'
+  },
+  {
+    title: 'Timely Delivery',
+    icon: <Clock className="text-4xl mb-4" />,
+    description: 'We value your time and strictly adhere to project timelines, delivering solutions on schedule without compromising on quality.'
+  },
+  {
+    title: 'Quality Assurance',
+    icon: <CheckCircle className="text-4xl mb-4" />,
+    description: 'Every project undergoes rigorous testing and quality checks to ensure flawless performance, security, and user experience.'
+  },
+  {
+    title: 'Client Satisfaction',
+    icon: <ThumbsUp className="text-4xl mb-4" />,
+    description: 'Our client-centric approach prioritizes your vision and objectives, resulting in solutions that consistently exceed expectations.'
+  },
+  {
+    title: 'Dedicated Support',
+    icon: <Users className="text-4xl mb-4" />,
+    description: 'We provide ongoing support and maintenance services, ensuring your digital solutions continue to perform optimally long after launch.'
+  },
+  {
+    title: 'Secure Solutions',
+    icon: <Shield className="text-4xl mb-4" />,
+    description: 'Security is paramount in our development process, implementing best practices to protect your data and provide peace of mind.'
+  }
+];
+
+const WhyChooseUsSection = () => {
+  const [activeAdvantage, setActiveAdvantage] = useState(null);
+
+  return (
+    <section className="py-10 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <motion.h2
+          className="text-4xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Why <span className="text-[#6d123f]">Choose Us</span>
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {advantages.map((advantage, index) => (
+            <motion.div
+              key={advantage.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              whileHover={{ 
+                scale: 1.03, 
+                boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.1)'
+              }}
+              className="bg-white rounded-lg p-6 shadow cursor-pointer"
+              onClick={() => setActiveAdvantage(activeAdvantage === index ? null : index)}
+            >
+              <div className="flex items-center mb-4">
+                <span className="text-[#e6961d] mr-3">{advantage.icon}</span>
+                <h3 className="text-xl font-bold text-[#6d123f]">{advantage.title}</h3>
+              </div>
+              
+              <AnimatePresence>
+                <motion.p 
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="text-gray-700"
+                >
+                  {advantage.description}
+                </motion.p>
+              </AnimatePresence>
+              
+              {activeAdvantage === index && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="mt-4 pt-4 border-t border-gray-200"
+                >
+                  <ul className="space-y-2">
+                    {[...Array(3)].map((_, i) => (
+                      <li key={i} className="flex items-center">
+                        <CheckCircle size={16} className="text-[#e6961d] mr-2" />
+                        <span className="text-sm">
+                          {i === 0 && `${advantage.title} benefit example #1`}
+                          {i === 1 && `${advantage.title} benefit example #2`}
+                          {i === 2 && `${advantage.title} benefit example #3`}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
+          <button className="px-8 py-3 bg-[#e6961d] text-white font-bold rounded-full hover:bg-[#6d123f] transition-colors duration-300">
+            Contact Us Today
+          </button>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseUsSection;
