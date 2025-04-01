@@ -9,7 +9,10 @@ import {
   Users,
   BookOpen,
   Building2,
-  ArrowRight
+  ArrowRight,
+  Users2Icon,
+  Book,
+  StarIcon
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,65 +26,65 @@ const HeroSection = () => {
   const slides = [
     {
       image: "/slider1.png",
-      title: "Welcome to Indian Webify",
-      subtitle: "Darul Hadith Jaynagar",
+      title: "Elevate Your Digital Presence",
+      subtitle: "Innovative Web & Marketing Solutions",
       description:
-        "Fostering Islamic education and spiritual growth in the heart of Assam",
-      cta: "Explore Programs",
+        "From stunning website designs to powerful digital marketing strategies, we help businesses establish a dominant online presence and drive success",
+      cta: "Get Started",
       ctaLink: "/programs",
-      secondaryCta: "Contact Us",
+      secondaryCta: "Our Services",
       secondaryCtaLink: "/contact",
-      color: "from-blue-600/80 to-purple-700/60"
+      color: ""
     },
     {
       image: "/slider1.png",
-      title: "Excellence in Education",
-      subtitle: "Quality Islamic Learning",
+      title: "Build. Grow. Succeed",
+      subtitle: "Comprehensive Web Development & Branding",
       description:
-        "Providing comprehensive Islamic education with modern teaching methods",
-      cta: "Our Courses",
+        "We craft high-performance websites that not only look amazing but also deliver seamless user experiences and drive conversions.",
+      cta: "View Portfolio",
       ctaLink: "/courses",
-      secondaryCta: "Learn More",
+      secondaryCta: "Contact Us",
       secondaryCtaLink: "/about",
-      color: "from-emerald-600/80 to-teal-700/60"
+      color: ""
     },
     {
       image: "/slider1.png",
-      title: "Join Our Community",
-      subtitle: "Admission Open 2024",
+      title: "Reach Your Target Audience",
+      subtitle: "Digital Marketing That Delivers Results",
       description:
-        "Begin your journey of knowledge and spiritual development with us",
-      cta: "Apply Now",
+        "Our tailored marketing strategies boost visibility, engage customers, and maximize your ROI. Let us grow your brand together.",
+      cta: "Learn More",
       ctaLink: "/admissions",
-      secondaryCta: "View Requirements",
+      secondaryCta: "Schedule a Call",
       secondaryCtaLink: "/requirements",
-      color: "from-orange-600/80 to-red-700/60"
+      color: ""
     },
   ];
 
   // Improved statistics with animation
   const stats = [
     {
-      icon: <Users className="w-6 h-6 text-white" />,
-      value: "500+",
-      label: "Students",
+      icon: <Book className="w-6 h-6 text-white" />,
+      value: "100+",
+      label: "Projects",
       delay: 0.2,
     },
     {
-      icon: <GraduationCap className="w-6 h-6 text-white" />,
-      value: "50+",
-      label: "Teachers",
+      icon: <Users2Icon className="w-6 h-6 text-white" />,
+      value: "100+",
+      label: "Clients",
       delay: 0.3,
     },
     {
-      icon: <BookOpen className="w-6 h-6 text-white" />,
-      value: "15+",
-      label: "Courses",
+      icon: <StarIcon className="w-6 h-6 text-white" />,
+      value: "4.9",
+      label: "Ratings",
       delay: 0.4,
     },
     {
       icon: <Building2 className="w-6 h-6 text-white" />,
-      value: "25+",
+      value: "10+",
       label: "Years",
       delay: 0.5,
     },
@@ -200,7 +203,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm text-blue-200 font-medium text-sm md:text-base mb-4"
+              className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm text-[#e6961d] font-medium text-sm md:text-base mb-4"
             >
               {slides[currentSlide].subtitle}
             </motion.span>
@@ -209,7 +212,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+              className="text-2xl md:text-4xl font-bold text-white mb-6 leading-tight"
             >
               {slides[currentSlide].title}
             </motion.h1>
@@ -218,7 +221,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-xl text-blue-100/90 mb-8 max-w-2xl mx-auto"
+              className="text-lg text-blue-100/90 mb-8 max-w-2xl mx-auto"
             >
               {slides[currentSlide].description}
             </motion.p>

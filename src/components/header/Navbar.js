@@ -55,12 +55,12 @@ const Navbar = () => {
       title: "Services",
       icon: <BookOpen className="h-4 w-4" />,
       submenu: [
-        {title: "Islamic Studies Programs",href: "/academics/islamic-studies"},
-        { title: "Hafiz Program", href: "/academics/hafiz-program" },
-        { title: "Arabic Language", href: "/academics/arabic-language" },
-        { title: "Quran Studies", href: "/academics/quran-studies" },
-        { title: "Hadith Studies", href: "/academics/hadith-studies" },
-        { title: "Faculty & Staff", href: "/academics/faculty" },
+        {title: "Website Development",href: "/academics/islamic-studies"},
+        { title: "App Development", href: "/academics/hafiz-program" },
+        { title: "Digital Marketing", href: "/academics/arabic-language" },
+        { title: "Other Services", href: "/academics/quran-studies" },
+        // { title: "Hadith Studies", href: "/academics/hadith-studies" },
+        // { title: "Faculty & Staff", href: "/academics/faculty" },
       ],
     },
     {
@@ -299,7 +299,7 @@ const Navbar = () => {
                           >
                             <Link
                               href={subItem.href}
-                              className="flex items-center px-4 py-2 font-bold text-gray-700 hover:bg-gray-50 hover:text-[#004aad] transition-colors"
+                              className="flex items-center px-4 py-2 font-bold text-gray-700 hover:bg-gray-50 hover:text-[#6d123f] transition-colors"
                             >
                               <span className="relative">
                                 <span className="relative z-10">
