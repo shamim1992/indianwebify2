@@ -385,7 +385,7 @@ const ProcessSection = () => {
               <Search className="text-[#a02a62]" />
             </div>
             <h4 className="text-lg font-bold text-[#a02a62] mb-2">Transparent Communication</h4>
-            <p className="text-gray-600">You'll always know exactly where your project stands with regular updates and clear milestone tracking.</p>
+            <p className="text-gray-600">You will always know exactly where your project stands with regular updates and clear milestone tracking.</p>
           </div>
           
           <div className="bg-white p-6 rounded-xl shadow border-t-4 border-[#e6961d]">
