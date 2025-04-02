@@ -60,13 +60,14 @@ const ServicesSection = () => {
     <section className="py-10">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold text-center mb-12"
+          className="text-4xl font-bold text-center mb-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Our <span className="text-[#6d123f]">Services</span>
         </motion.h2>
+        <div className="w-20 h-1 bg-[#e6961d] mx-auto mb-4"></div>
         
         <div className="flex flex-wrap justify-center mb-8">
           {services.map((service, index) => (
