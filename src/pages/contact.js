@@ -93,10 +93,10 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8">
-              Let's discuss your project and bring your ideas to life
+              Let&apos;s discuss your project and bring your ideas to life
             </p>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
-              Ready to start your digital transformation journey? Get in touch with our team of experts and let's create something amazing together.
+              Ready to start your digital transformation journey? Get in touch with our team of experts and let&apos;s create something amazing together.
             </p>
           </motion.div>
         </div>

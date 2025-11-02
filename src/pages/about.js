@@ -213,7 +213,7 @@ const About = () => {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help you achieve your digital transformation goals.
+              Let&apos;s discuss your project and see how we can help you achieve your digital transformation goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

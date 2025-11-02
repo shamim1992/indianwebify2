@@ -240,7 +240,7 @@ const Portfolio = () => {
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let's create something amazing together. Contact us to discuss your project requirements.
+              Let&apos;s create something amazing together. Contact us to discuss your project requirements.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
