@@ -55,10 +55,11 @@ const FooterSection = () => {
   const servicesLinks = [
     { name: 'Website Development', url: '/services/website-development' },
     { name: 'Mobile App Development', url: '/services/app-development' },
-    { name: 'E-commerce Solutions', url: '/services/ecommerce' },
+    { name: 'AI Development', url: '/services/ai-development' },
+    { name: 'Research Projects', url: '/services/research-projects' },
     { name: 'Digital Marketing', url: '/services/digital-marketing' },
-    { name: 'UI/UX Design', url: '/services/ui-ux-design' },
-    { name: 'AI Development', url: '/services/ai-development' }
+    { name: 'E-commerce Solutions', url: '/services/ecommerce' },
+    { name: 'UI/UX Design', url: '/services/ui-ux-design' }
   ];
 
   // Recent blog posts
@@ -103,7 +104,7 @@ const FooterSection = () => {
               <span className="absolute bottom-0 left-0 w-12 h-1 bg-[#e6961d]"></span>
             </h3>
             <p className="text-gray-300 mb-6">
-              Transforming businesses through innovative digital solutions. We specialize in web development, mobile apps, and digital marketing services.
+              Transforming businesses through innovative digital solutions. We specialize in web development, mobile apps, AI development, research projects, and digital marketing services.
             </p>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -325,7 +326,7 @@ const FooterSection = () => {
         {/* Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center py-8 border-t border-gray-800 text-sm">
           <p className="text-gray-400 mb-4 md:mb-0">
-            © {currentYear} Indian Webify. All rights reserved.
+           Copyright © {currentYear} Indian Webify. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center space-x-4">
             <a href="/privacy-policy" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">

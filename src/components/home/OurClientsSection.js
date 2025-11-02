@@ -346,7 +346,7 @@ const OurClientsSection = () => {
 
         {/* Enhanced CTA Section */}
         <motion.div
-          className="text-center mt-16 bg-gradient-to-r from-[#6d123f] to-[#8a1d50] p-12 rounded-2xl shadow relative overflow-hidden"
+          className="text-center mt-16 bg-gradient-to-r from-[#6d123f] to-[#e6961d] p-12 rounded-2xl shadow relative overflow-hidden"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}

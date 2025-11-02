@@ -267,7 +267,7 @@ const PortfolioSection = () => {
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
                   {/* Replace with actual image */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-[#6d123f] to-[#8a1d50] text-white">
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-[#6d123f] to-[#e6961d] text-white">
                     <span className="text-xl font-semibold">{project.title}</span>
                   </div>
                   
@@ -374,7 +374,7 @@ const PortfolioSection = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="relative h-64 md:h-80 bg-gradient-to-r from-[#6d123f] to-[#ca4f84]">
+            <div className="relative h-64 md:h-80 bg-gradient-to-r from-[#6d123f] to-[#e6961d]">
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
                 <div className="w-20 h-20 rounded-full bg-white bg-opacity-20 backdrop-blur-sm flex items-center justify-center mb-5">
                   <span className="text-white transform scale-150">{selectedProject.icon}</span>
@@ -388,7 +388,7 @@ const PortfolioSection = () => {
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white bg-opacity-20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-opacity-40 transition-all duration-300"
+                className="absolute top-4 right-4 w-10 h-10 rounded-full cursor-pointer bg-[#e6961d] hover:bg-[#6d123f] bg-opacity-20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-opacity-40 transition-all duration-300"
               >
                 <X size={20} />
               </button>
@@ -509,7 +509,7 @@ const PortfolioSection = () => {
                       href={selectedProject.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="w-full py-3 bg-[#6d123f] text-white text-center rounded-xl font-medium flex items-center justify-center hover:bg-[#8a1d50] transition-colors duration-300"
+                      className="w-full py-3 bg-[#6d123f] text-white text-center rounded-xl font-medium flex items-center justify-center hover:bg-[#e6961d] transition-colors duration-300"
                     >
                       Visit Live Project <ExternalLink size={16} className="ml-2" />
                     </a>

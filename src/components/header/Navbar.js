@@ -7,6 +7,7 @@ import {
   Mail,
   Globe,
   BookOpen,
+  Home,
   Users,
   GraduationCap,
   Building2,
@@ -52,43 +53,36 @@ const Navbar = () => {
 
   const menuItems = [
     {
+      title: "Home",
+      icon: <Home className="h-4 w-4" />,
+      href: "/",
+    },
+    {
       title: "Services",
       icon: <BookOpen className="h-4 w-4" />,
       submenu: [
-        {title: "Website Development",href: "/academics/islamic-studies"},
-        { title: "App Development", href: "/academics/hafiz-program" },
-        { title: "Digital Marketing", href: "/academics/arabic-language" },
-        { title: "Other Services", href: "/academics/quran-studies" },
-        // { title: "Hadith Studies", href: "/academics/hadith-studies" },
-        // { title: "Faculty & Staff", href: "/academics/faculty" },
+        {title: "Website Development",href: "/services/website-development"},
+        { title: "App Development", href: "/services/app-development" },
+        { title: "AI Development", href: "/services/ai-development" },
+        { title: "Research Projects", href: "/services/research-projects" },
+        { title: "Digital Marketing", href: "/services/digital-marketing" },
+        { title: "Other Services", href: "/services/other-services" },
       ],
     },
     {
-      title: "Admissions",
-      icon: <GraduationCap className="h-4 w-4" />,
-      submenu: [
-        { title: "Admission Process", href: "/admissions/process" },
-        { title: "Requirements", href: "/admissions/requirements" },
-        { title: "Scholarships", href: "/admissions/scholarships" },
-        { title: "Application Forms", href: "/admissions/apply" },
-        { title: "Academic Calendar", href: "/admissions/calendar" },
-      ],
-    },
-    {
-      title: "Campus Life",
+      title: "Portfolio",
       icon: <Building2 className="h-4 w-4" />,
-      submenu: [
-        { title: "Hostel Facilities", href: "/campus/hostel" },
-        { title: "Masjid", href: "/campus/masjid" },
-        { title: "Library", href: "/campus/library" },
-        { title: "Student Activities", href: "/campus/activities" },
-        { title: "Campus Rules", href: "/campus/rules" },
-      ],
+      href: "/portfolio",
     },
     {
       title: "About",
       icon: <Users className="h-4 w-4" />,
       href: "/about",
+    },
+    {
+      title: "Contact",
+      icon: <Phone className="h-4 w-4" />,
+      href: "/contact",
     },
   ];
 
@@ -152,7 +146,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed shadow w-full z-50 transition-all duration-300 mb-24 ${
+      className={`sticky top-0 shadow w-full z-50 transition-all duration-300  ${
         isScrolled ? "bg-white shadow-md" : "bg-white backdrop-blur-md"
       }`}
       role="banner"
@@ -160,7 +154,7 @@ const Navbar = () => {
       {/* Skip to main content link */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:p-4 focus:bg-blue-600 focus:text-white"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:p-4 focus:bg-[#6d123f] focus:text-white"
       >
         Skip to main content
       </a>
@@ -190,23 +184,11 @@ const Navbar = () => {
             {/* Right Section */}
             <div className="flex items-center space-x-6">
               <Link
-                href="/portal/student"
-                className="hover:text-white/80 transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/portal/faculty"
+                href="/about"
                 className="hover:text-white/80 transition-colors"
               >
                 About Us
               </Link>
-              {/* <Link
-                href="/alumni"
-                className="hover:text-white/80 transition-colors"
-              >
-                Login
-              </Link> */}
               <Link
                 href="/contact"
                 className="hover:text-white/80 transition-colors"
@@ -257,7 +239,7 @@ const Navbar = () => {
               >
                 {item.submenu ? (
                   <button
-                    className="flex items-center font-bold gap-2 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-[#004aad] transition-all"
+                    className="flex items-center font-bold gap-2 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-[#6d123f] transition-all"
                     aria-expanded={hoveredItem === item.title}
                     aria-haspopup="true"
                   >
@@ -272,7 +254,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="flex items-center font-bold gap-2 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-[#004aad] transition-all"
+                    className="flex items-center font-bold gap-2 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-[#6d123f] transition-all"
                   >
                     {item.icon}
                     <span>{item.title}</span>
@@ -306,7 +288,7 @@ const Navbar = () => {
                                   {subItem.title}
                                 </span>
                                 <motion.span
-                                  className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#004aad]"
+                                  className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#6d123f]"
                                   initial={{ width: 0 }}
                                   whileHover={{ width: "100%" }}
                                   transition={{ duration: 0.3 }}
@@ -322,12 +304,12 @@ const Navbar = () => {
               </div>
             ))}
 
-            {/* Apply Now Button */}
+            {/* Get Quote Button */}
             <Link
-              href="/admissions/apply"
+              href="/contact"
               className="ml-4 px-6 py-2 bg-[#e6961d] text-white rounded-full hover:bg-[#6d123f]/90 transition-all hover:scale-105 duration-300"
             >
-              Quotation
+              Get Quote
             </Link>
           </div>
 
@@ -358,7 +340,7 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-black/50 z-40"
+              className="fixed inset-0 bg-black/50 z-[60]"
               aria-hidden="true"
               onClick={() => setIsMobileMenuOpen(false)}
             />
@@ -369,7 +351,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed top-0 right-0 h-screen w-[320px] bg-white z-50"
+              className="fixed top-0 right-0 h-screen w-[320px] bg-white z-[70]"
               style={{ height: "100dvh" }} // Using dynamic viewport height
               role="dialog"
               aria-modal="true"
@@ -447,7 +429,7 @@ const Navbar = () => {
                                       >
                                         <Link
                                           href={subItem.href}
-                                          className="block p-2 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-[#004aad] transition-colors"
+                                          className="block p-2 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-[#6d123f] transition-colors"
                                           onClick={() =>
                                             setIsMobileMenuOpen(false)
                                           }
@@ -479,46 +461,29 @@ const Navbar = () => {
                 {/* Menu Footer */}
                 <div className="p-6 bg-gray-50 border-t border-gray-200">
                   <div className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <Link
-                        href="/portal/student"
-                        className="text-sm text-gray-600 hover:text-[#004aad] transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Student Portal
-                      </Link>
-                      <Link
-                        href="/portal/faculty"
-                        className="text-sm text-gray-600 hover:text-[#004aad] transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Faculty Portal
-                      </Link>
-                    </div>
-
                     <div className="space-y-2">
                       <a
-                        href="tel:+1234567890"
+                        href="tel:+919876543210"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
                         <Phone className="h-4 w-4" />
-                        <span>+1234567890</span>
+                        <span>+91 98765 43210</span>
                       </a>
                       <a
-                        href="mailto:info@jamiaassam.com"
+                        href="mailto:info@indianwebify.com"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
                         <Mail className="h-4 w-4" />
-                        <span>info@jamiaassam.com</span>
+                        <span>info@indianwebify.com</span>
                       </a>
                     </div>
 
                     <Link
-                      href="/admissions/apply"
-                      className="block w-full text-center px-6 py-3 bg-[#004aad] text-white rounded-full hover:bg-[#004aad]/90 transition-all"
+                      href="/contact"
+                      className="block w-full text-center px-6 py-3 bg-[#e6961d] text-white rounded-full hover:bg-[#6d123f] transition-all"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Donate Now
+                      Get Quote
                     </Link>
                   </div>
                 </div>
@@ -528,7 +493,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
       {/* Announcement Banner */}
-      {/* <div className="bg-[#004aad]/10 text-[#004aad] px-4 py-2 text-center text-sm">
+      {/* <div className="bg-[#6d123f]/10 text-[#6d123f] px-4 py-2 text-center text-sm">
         <p>
           Admissions open for 2024-25 Academic Year.{" "}
           <Link href="/admissions/apply" className="underline font-medium">

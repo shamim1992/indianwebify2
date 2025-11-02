@@ -3,13 +3,13 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2Icon, ComputerIcon, PhoneIcon, Search, Smartphone } from 'lucide-react';
+import { Code2, Computer, Phone, Search, Smartphone, Brain, Microscope } from 'lucide-react';
 
 
 const services = [
   {
     category: 'Website Development',
-    icon: <ComputerIcon className="text-4xl mb-4" />,
+    icon: <Computer className="text-4xl mb-4" />,
     items: [
       { title: 'Ecommerce Website', description: 'Develop feature-rich online stores with seamless user experience and secure payment gateways, tailored to boost your sales and customer engagement.' },
       { title: 'Hospital Website', description: 'Create responsive and user-friendly websites for healthcare facilities, offering online appointment scheduling, patient portals, and information management systems.' },
@@ -36,19 +36,41 @@ const services = [
       { title: 'Google & Facebook Ads', description: 'Manage targeted advertising campaigns on Google and Facebook, driving traffic and conversions through strategic ad placements.' },
       { title: 'Search Engine Optimization (SEO)', description: 'Optimize your website to rank higher in search engine results, increasing visibility, traffic, and customer engagement.' },
       { title: 'Social Media Optimization (SMO)', description: 'Enhance your social media presence with strategies to increase followers, engagement, and brand awareness across platforms.' },
-      { title: 'Search Engine Marketing (SEM)', description: 'Implement paid search marketing strategies to improve your website’s visibility on search engine results pages through targeted ads.' },
+      { title: 'Search Engine Marketing (SEM)', description: 'Implement paid search marketing strategies to improve your website visibility on search engine results pages through targeted ads.' },
       { title: 'Email Marketing', description: 'Develop and execute email marketing campaigns that engage your audience, boost conversions, and build customer loyalty.' }
     ]
   },
   {
+    category: 'AI Development',
+    icon: <Brain className="text-4xl mb-4" />,
+    items: [
+      { title: 'Machine Learning Models', description: 'Develop custom machine learning models for predictive analytics, data classification, and intelligent automation tailored to your business needs.' },
+      { title: 'Natural Language Processing', description: 'Create NLP solutions for text analysis, sentiment analysis, language translation, and intelligent content processing.' },
+      { title: 'Computer Vision Solutions', description: 'Build computer vision applications for image recognition, object detection, facial recognition, and automated visual analysis.' },
+      { title: 'AI Chatbots & Virtual Assistants', description: 'Develop intelligent chatbots and virtual assistants that can handle customer queries, provide support, and automate business processes.' },
+      { title: 'AI Integration Services', description: 'Integrate AI capabilities into existing systems, including recommendation engines, predictive analytics, and intelligent automation workflows.' }
+    ]
+  },
+  {
+    category: 'Research Projects',
+    icon: <Microscope className="text-4xl mb-4" />,
+    items: [
+      { title: 'Academic Research Support', description: 'Provide technical support for academic research projects, including data analysis, software development, and research tool creation.' },
+      { title: 'Innovation & Prototyping', description: 'Develop proof-of-concept applications and prototypes for innovative ideas, helping validate concepts before full-scale development.' },
+      { title: 'Data Science Research', description: 'Conduct data science research projects, including statistical analysis, data mining, and insights generation for research purposes.' },
+      { title: 'Technology Feasibility Studies', description: 'Perform feasibility studies for new technologies, evaluating technical viability and implementation strategies for research initiatives.' },
+      { title: 'Research Documentation & Reporting', description: 'Create comprehensive documentation and reports for research projects, including technical specifications and findings analysis.' }
+    ]
+  },
+  {
     category: 'Other Services',
-    icon: <Code2Icon className="text-4xl mb-4" />,
+    icon: <Code2 className="text-4xl mb-4" />,
     items: [
       { title: 'Payment Gateway Integration', description: 'Integrate secure payment gateways into your website or app, ensuring smooth and secure online transactions for your customers.' },
-      { title: 'Content Writing', description: 'Provide professional content writing services, creating engaging, SEO-friendly copy tailored to your brand’s voice and target audience.' },
+      { title: 'Content Writing', description: 'Provide professional content writing services, creating engaging, SEO-friendly copy tailored to your brand voice and target audience.' },
       { title: 'Figma Design', description: 'Design high-fidelity prototypes and UI/UX designs using Figma, ensuring a seamless user experience and visually appealing interfaces.' },
       { title: 'PSD to HTML Design', description: 'Convert your Photoshop designs into responsive and pixel-perfect HTML/CSS code, ready for development and deployment.' },
-      { title: 'AI Chatbot', description: 'Develop AI-powered chatbots to automate customer service, lead generation, and user interaction, enhancing user experience and operational efficiency.' }
+      { title: 'Technical Consulting', description: 'Provide expert technical consulting services to help you make informed decisions about technology stack, architecture, and implementation strategies.' }
     ]
   }
 ];
@@ -57,15 +79,15 @@ const ServicesSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="py-10">
-      <div className="container mx-auto px-4">
+    <section className="py-16 px-8 bg-[#6d123f]">
+      <div className="container mx-auto px-6">
         <motion.h2
-          className="text-4xl font-bold text-center mb-2"
+          className="text-4xl font-bold text-center mb-2 text-[#e6961d]"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Our <span className="text-[#6d123f]">Services</span>
+          Our <span className="text-white">Services</span>
         </motion.h2>
         <div className="w-20 h-1 bg-[#e6961d] mx-auto mb-4"></div>
         
@@ -74,10 +96,10 @@ const ServicesSection = () => {
             <button
               key={service.category}
               onClick={() => setActiveTab(index)}
-              className={`px-4 font-bold shadow py-2 m-2 rounded-full transition-colors duration-300 ${
+              className={`px-6 py-3 font-bold shadow m-2 rounded-full transition-colors duration-300 ${
                 activeTab === index
                   ? 'bg-[#e6961d] text-white'
-                  : 'btn-outline btn-blue-500 text-[#6d123f] hover:bg-gray-300'
+                  : 'bg-white text-[#6d123f] hover:bg-[#e6961d] hover:text-white border-2 border-[#e6961d]'
               }`}
             >
               {service.category}
@@ -94,9 +116,9 @@ const ServicesSection = () => {
             transition={{ duration: 0.3 }}
             className="rounded-lg p-2"
           >
-            <div className="text-center mb-8 flex items-center justify-start gap-3">
-              <span className='text-[#e6961d] h-5 w-5'>{services[activeTab].icon}</span> 
-              <span className="text-2xl font-semibold text-[#6d123f]">{services[activeTab].category}</span>
+            <div className="text-center mb-8 flex items-center justify-center gap-3">
+              <span className='text-[#e6961d] h-6 w-6'>{services[activeTab].icon}</span> 
+              <span className="text-2xl font-semibold text-[#e6961d]">{services[activeTab].category}</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {services[activeTab].items.map((item, index) => (
@@ -105,11 +127,11 @@ const ServicesSection = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)' }}
-                  className="rounded-lg p-4 transition-shadow duration-300 shadow"
+                  whileHover={{ scale: 1.05, boxShadow: '0px 0px 15px rgba(230, 150, 29, 0.3)' }}
+                  className="rounded-lg p-6 transition-shadow duration-300 shadow-lg bg-white"
                 >
-                  <h4 className="mb-2 text-[#6d123f] font-bold">{item.title}</h4>
-                  <p className="text-sm cursor-pointer">{item.description}</p>
+                  <h4 className="mb-3 text-[#6d123f] font-bold text-lg">{item.title}</h4>
+                  <p className="text-sm text-gray-700 cursor-pointer leading-relaxed">{item.description}</p>
                 </motion.div>
               ))}
             </div>

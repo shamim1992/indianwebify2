@@ -43,7 +43,7 @@ const ProcessSection = () => {
         "Interactive prototyping",
         "Design review and iterations"
       ],
-      color: "#8a1d50"
+      color: "#6d123f"
     },
     {
       id: 3,
@@ -57,7 +57,7 @@ const ProcessSection = () => {
         "API integrations",
         "Security implementation"
       ],
-      color: "#a02a62"
+      color: "#6d123f"
     },
     {
       id: 4,
@@ -71,7 +71,7 @@ const ProcessSection = () => {
         "Performance optimization",
         "Security testing"
       ],
-      color: "#b63b73"
+      color: "#6d123f"
     },
     {
       id: 5,
@@ -85,7 +85,7 @@ const ProcessSection = () => {
         "Final pre-launch checks",
         "Smooth deployment process"
       ],
-      color: "#ca4f84"
+      color: "#6d123f"
     },
     {
       id: 6,
@@ -211,7 +211,7 @@ const ProcessSection = () => {
                 >
                   <motion.div
                     className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold shadow cursor-pointer
-                      ${currentStep >= step.id ? 'bg-gradient-to-br from-[#6d123f] to-[#ca4f84]' : 'bg-white border-2 border-gray-200 text-gray-400'}`}
+                      ${currentStep >= step.id ? 'bg-gradient-to-br from-[#6d123f] to-[#e6961d]' : 'bg-white border-2 border-gray-200 text-gray-400'}`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     animate={{ 
@@ -380,11 +380,11 @@ const ProcessSection = () => {
             <p className="text-gray-600">Our systematic approach has been refined through years of successful project deliveries across diverse industries.</p>
           </div>
           
-          <div className="bg-white p-6 rounded-xl shadow border-t-4 border-[#a02a62]">
-            <div className="w-12 h-12 rounded-full bg-[#a02a62] bg-opacity-10 flex items-center justify-center mb-4">
-              <Search className="text-[#a02a62]" />
+          <div className="bg-white p-6 rounded-xl shadow border-t-4 border-[#6d123f]">
+            <div className="w-12 h-12 rounded-full bg-[#6d123f] bg-opacity-10 flex items-center justify-center mb-4">
+              <Search className="text-[#6d123f]" />
             </div>
-            <h4 className="text-lg font-bold text-[#a02a62] mb-2">Transparent Communication</h4>
+            <h4 className="text-lg font-bold text-[#6d123f] mb-2">Transparent Communication</h4>
             <p className="text-gray-600">You will always know exactly where your project stands with regular updates and clear milestone tracking.</p>
           </div>
           
@@ -407,7 +407,7 @@ const ProcessSection = () => {
         >
           <a 
             href="/contact" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#6d123f] to-[#ca4f84] text-white font-bold rounded-full shadow hover:shadow transform transition-all duration-300 hover:-translate-y-1"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#6d123f] to-[#e6961d] text-white font-bold rounded-full shadow hover:shadow transform transition-all duration-300 hover:-translate-y-1"
           >
             Start Your Project
             <ArrowRight className="ml-2" />

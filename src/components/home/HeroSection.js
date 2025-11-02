@@ -10,9 +10,9 @@ import {
   BookOpen,
   Building2,
   ArrowRight,
-  Users2Icon,
+  Users2,
   Book,
-  StarIcon
+  Star
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,9 +27,9 @@ const HeroSection = () => {
     {
       image: "/slider1.png",
       title: "Elevate Your Digital Presence",
-      subtitle: "Innovative Web & Marketing Solutions",
+      subtitle: "Innovative Web, AI & Marketing Solutions",
       description:
-        "From stunning website designs to powerful digital marketing strategies, we help businesses establish a dominant online presence and drive success",
+        "From stunning website designs to cutting-edge AI development and powerful digital marketing strategies, we help businesses establish a dominant online presence and drive success",
       cta: "Get Started",
       ctaLink: "/programs",
       secondaryCta: "Our Services",
@@ -39,9 +39,9 @@ const HeroSection = () => {
     {
       image: "/slider1.png",
       title: "Build. Grow. Succeed",
-      subtitle: "Comprehensive Web Development & Branding",
+      subtitle: "Comprehensive Web Development & AI Solutions",
       description:
-        "We craft high-performance websites that not only look amazing but also deliver seamless user experiences and drive conversions.",
+        "We craft high-performance websites and develop cutting-edge AI solutions that not only look amazing but also deliver intelligent automation and drive conversions.",
       cta: "View Portfolio",
       ctaLink: "/courses",
       secondaryCta: "Contact Us",
@@ -50,10 +50,10 @@ const HeroSection = () => {
     },
     {
       image: "/slider1.png",
-      title: "Reach Your Target Audience",
-      subtitle: "Digital Marketing That Delivers Results",
+      title: "Innovate Through Research",
+      subtitle: "AI Development & Research Projects",
       description:
-        "Our tailored marketing strategies boost visibility, engage customers, and maximize your ROI. Let us grow your brand together.",
+        "Our AI development and research-based project solutions help you stay ahead of the curve. From machine learning models to academic research support, we turn innovative ideas into reality.",
       cta: "Learn More",
       ctaLink: "/admissions",
       secondaryCta: "Schedule a Call",
@@ -71,13 +71,13 @@ const HeroSection = () => {
       delay: 0.2,
     },
     {
-      icon: <Users2Icon className="w-6 h-6 text-white" />,
+      icon: <Users2 className="w-6 h-6 text-white" />,
       value: "100+",
       label: "Clients",
       delay: 0.3,
     },
     {
-      icon: <StarIcon className="w-6 h-6 text-white" />,
+      icon: <Star className="w-6 h-6 text-white" />,
       value: "4.9",
       label: "Ratings",
       delay: 0.4,
@@ -125,7 +125,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen pt-36 lg:pt-44 overflow-hidden bg-gray-900">
+    <section className="relative w-full  min-h-screen overflow-hidden bg-[#6d123f]">
       {/* Background Slides */}
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
@@ -154,7 +154,7 @@ const HeroSection = () => {
             x: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.5 },
           }}
-          className="absolute inset-0"
+          className="absolute inset-0 top-0"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={1}
@@ -188,9 +188,9 @@ const HeroSection = () => {
       </AnimatePresence>
 
       {/* Content Container */}
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
+      <div className="relative h-full min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pt-24">
         {/* Text Content with slide-specific animations */}
-        <div className="flex flex-col items-center text-center mt-4 lg:mt-0">
+        <div className="flex flex-col items-center text-center">
           <motion.div
             key={`content-${currentSlide}`}
             initial={{ opacity: 0, y: 30 }}
@@ -221,7 +221,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-lg text-blue-100/90 mb-8 max-w-2xl mx-auto"
+              className="text-lg text-white/90 mb-8 max-w-2xl mx-auto"
             >
               {slides[currentSlide].description}
             </motion.p>
@@ -273,7 +273,7 @@ const HeroSection = () => {
                 >
                   {stat.value}
                 </motion.div>
-                <div className="text-xs sm:text-sm text-blue-100/80">
+                <div className="text-xs sm:text-sm text-white/80">
                   {stat.label}
                 </div>
               </motion.div>

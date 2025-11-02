@@ -4,7 +4,7 @@ const lora = Lora({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={lora.className}>
+    <main className='font-sans'>
       <Component {...pageProps} />
     </main>
   )

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Code, Users, BarChart, Globe, LightbulbIcon } from 'lucide-react';
+import { CheckCircle, Code, Users, BarChart, Globe, Lightbulb, Brain, Microscope } from 'lucide-react';
 
 const AboutUsSection = () => {
   const fadeIn = {
@@ -19,9 +19,11 @@ const AboutUsSection = () => {
   const expertise = [
     { text: 'Custom Web Development', icon: <Code size={16} className="text-[#e6961d]" /> },
     { text: 'Mobile App Solutions', icon: <Globe size={16} className="text-[#e6961d]" /> },
+    { text: 'AI Development & ML Models', icon: <Brain size={16} className="text-[#e6961d]" /> },
+    { text: 'Research Project Support', icon: <Microscope size={16} className="text-[#e6961d]" /> },
     { text: 'Digital Marketing Strategies', icon: <BarChart size={16} className="text-[#e6961d]" /> },
     { text: 'E-commerce Platforms', icon: <Users size={16} className="text-[#e6961d]" /> },
-    { text: 'UI/UX Design', icon: <LightbulbIcon size={16} className="text-[#e6961d]" /> },
+    { text: 'UI/UX Design', icon: <Lightbulb size={16} className="text-[#e6961d]" /> },
     { text: 'Technical Support', icon: <CheckCircle size={16} className="text-[#e6961d]" /> }
   ];
 
@@ -69,7 +71,7 @@ const AboutUsSection = () => {
               {...fadeIn}
               transition={{ delay: 0.2 }}
             >
-              Indian Webify is a premier web development and digital services company dedicated to transforming your digital presence. We combine technical expertise with creative innovation to deliver solutions that drive business growth and enhance user experiences.
+              Indian Webify is a premier web development, AI development, and digital services company dedicated to transforming your digital presence. We combine technical expertise with creative innovation to deliver solutions that drive business growth and enhance user experiences.
             </motion.p>
             
             <motion.p 
@@ -77,7 +79,7 @@ const AboutUsSection = () => {
               {...fadeIn}
               transition={{ delay: 0.3 }}
             >
-              Founded with a vision to empower businesses through technology, we have grown into a team of passionate professionals committed to excellence in every project we undertake. Our approach blends cutting-edge technology with strategic insights to create digital solutions that stand out in todays competitive landscape.
+              Founded with a vision to empower businesses through technology, we have grown into a team of passionate professionals committed to excellence in every project we undertake. Our approach blends cutting-edge technology including AI development and research-based solutions with strategic insights to create digital solutions that stand out in today's competitive landscape.
             </motion.p>
             
             {/* Stats Row */}
