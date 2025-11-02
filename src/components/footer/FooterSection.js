@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { 
   Phone, 
   Mail, 
@@ -149,13 +150,13 @@ const FooterSection = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index} className="group">
-                  <a 
+                  <Link 
                     href={link.url} 
                     className="flex items-center text-gray-300 hover:text-[#e6961d] transition-colors duration-300"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 transform group-hover:translate-x-1 transition-transform duration-300" />
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -167,13 +168,13 @@ const FooterSection = () => {
             <ul className="space-y-3">
               {servicesLinks.map((link, index) => (
                 <li key={index} className="group">
-                  <a 
+                  <Link 
                     href={link.url} 
                     className="flex items-center text-gray-300 hover:text-[#e6961d] transition-colors duration-300"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 transform group-hover:translate-x-1 transition-transform duration-300" />
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -187,7 +188,7 @@ const FooterSection = () => {
             </h3>
             <div className="space-y-4">
               {recentPosts.map((post, index) => (
-                <a 
+                <Link 
                   key={index} 
                   href={post.url}
                   className="block group"
@@ -201,16 +202,16 @@ const FooterSection = () => {
                       {post.date}
                     </div>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
-            <a 
+            <Link 
               href="/blog" 
               className="inline-flex items-center text-[#e6961d] mt-4 hover:text-white transition-colors duration-300"
             >
               View all posts
               <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
+            </Link>
           </motion.div>
 
           {/* Newsletter & Social */}
@@ -329,15 +330,15 @@ const FooterSection = () => {
            Copyright © {currentYear} Indian Webify. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center space-x-4">
-            <a href="/privacy-policy" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
+            <Link href="/privacy-policy" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
               Privacy Policy
-            </a>
-            <a href="/terms-of-service" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
+            </Link>
+            <Link href="/terms-of-service" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
               Terms of Service
-            </a>
-            <a href="/sitemap" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
+            </Link>
+            <Link href="/sitemap" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
               Sitemap
-            </a>
+            </Link>
           </div>
         </div>
       </div>

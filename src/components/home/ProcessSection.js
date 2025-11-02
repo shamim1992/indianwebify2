@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { 
   Search, 
   FileCode, 
@@ -405,13 +406,13 @@ const ProcessSection = () => {
           transition={{ delay: 0.5 }}
           className="text-center mt-16"
         >
-          <a 
+          <Link 
             href="/contact" 
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#6d123f] to-[#e6961d] text-white font-bold rounded-full shadow hover:shadow transform transition-all duration-300 hover:-translate-y-1"
           >
             Start Your Project
             <ArrowRight className="ml-2" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
