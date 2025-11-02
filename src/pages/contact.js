@@ -164,7 +164,7 @@ const Contact = () => {
                     Message Sent!
                   </h3>
                   <p className="text-gray-600">
-                    Thank you for contacting us. We'll get back to you soon.
+                    Thank you for contacting us. We&apos;ll get back to you soon.
                   </p>
                 </motion.div>
               ) : (

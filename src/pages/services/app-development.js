@@ -40,7 +40,7 @@ const AppDevelopment = () => {
 
   const technologies = [
     { name: 'React Native', description: 'Cross-platform mobile development' },
-    { name: 'Flutter', description: 'Google\'s UI toolkit for mobile apps' },
+    { name: 'Flutter', description: "Google's UI toolkit for mobile apps" },
     { name: 'iOS Native', description: 'Swift and Objective-C development' },
     { name: 'Android Native', description: 'Kotlin and Java development' },
     { name: 'Progressive Web Apps', description: 'Web-based mobile experiences' },
