@@ -177,7 +177,7 @@ const AIDevelopment = () => {
               Ready to Implement AI in Your Business?
             </h2>
             <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-              Let's discuss how AI can transform your business processes and create intelligent solutions.
+              Let&apos;s discuss how AI can transform your business processes and create intelligent solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

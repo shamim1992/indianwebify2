@@ -177,7 +177,7 @@ const AppDevelopment = () => {
               Ready to Build Your Mobile App?
             </h2>
             <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-              Let's discuss your app idea and create a mobile solution that engages your users and drives business growth.
+              Let&apos;s discuss your app idea and create a mobile solution that engages your users and drives business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

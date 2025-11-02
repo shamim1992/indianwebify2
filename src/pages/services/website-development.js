@@ -196,7 +196,7 @@ const WebsiteDevelopment = () => {
               Ready to Build Your Dream Website?
             </h2>
             <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and create a website that drives results for your business.
+              Let&apos;s discuss your project and create a website that drives results for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
