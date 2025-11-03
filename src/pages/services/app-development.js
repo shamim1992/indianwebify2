@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Smartphone, CheckCircle, ArrowRight, ShoppingCart, Building, FileText, Brain, Users } from 'lucide-react';
 
@@ -48,8 +49,16 @@ const AppDevelopment = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#6d123f] ">
-      <Navbar />
+    <>
+      <SEO
+        title="Mobile App Development Services - Indian Webify"
+        description="Professional mobile app development services for iOS and Android. We build ecommerce apps, hospital apps, billing apps, AI apps, and social media apps using React Native, Flutter, and native technologies."
+        keywords="mobile app development, iOS app development, Android app development, React Native, Flutter, mobile apps, Indian Webify"
+        url="/services/app-development"
+        image="/indianwebify.png"
+      />
+      <div className="min-h-screen bg-[#6d123f] ">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-20 bg-[#6d123f] text-[#e6961d]">
@@ -200,8 +209,9 @@ const AppDevelopment = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

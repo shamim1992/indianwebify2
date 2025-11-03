@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
 
@@ -77,8 +78,16 @@ const Blog = () => {
   const categories = ['All', 'Web Design', 'AI Development', 'Digital Marketing', 'Web Development'];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
+    <>
+      <SEO
+        title="Blog - Indian Webify"
+        description="Stay updated with the latest trends, technologies, and best practices in web development, AI, and digital marketing. Read insights, tips, and industry news from Indian Webify experts."
+        keywords="web development blog, AI technology blog, digital marketing tips, web design trends, app development insights, technology articles"
+        url="/blog"
+        image="/indianwebify.png"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-[#6d123f] text-white">
@@ -272,8 +281,9 @@ const Blog = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Code2, CheckCircle, ArrowRight, CreditCard, FileText, Palette, Layers, MessageSquare } from 'lucide-react';
 
@@ -48,8 +49,16 @@ const OtherServices = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#6d123f] ">
-      <Navbar />
+    <>
+      <SEO
+        title="Other Services - Indian Webify"
+        description="Additional digital services including payment gateway integration, content writing, Figma design, PSD to HTML conversion, and technical consulting to support your digital projects."
+        keywords="payment gateway integration, content writing, Figma design, PSD to HTML, technical consulting, web services, Indian Webify"
+        url="/services/other-services"
+        image="/indianwebify.png"
+      />
+      <div className="min-h-screen bg-[#6d123f] ">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-20 bg-[#6d123f] text-[#e6961d]">
@@ -200,8 +209,9 @@ const OtherServices = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

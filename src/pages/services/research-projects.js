@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Microscope, CheckCircle, ArrowRight, GraduationCap, Lightbulb, BarChart3, FileText, Search } from 'lucide-react';
 
@@ -48,8 +49,16 @@ const ResearchProjects = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#6d123f] ">
-      <Navbar />
+    <>
+      <SEO
+        title="Research Projects Services - Indian Webify"
+        description="Comprehensive research project support including academic research, data science research, technology feasibility studies, innovation & prototyping, and research documentation services."
+        keywords="research projects, academic research support, data science research, technology feasibility studies, prototyping, research documentation, Indian Webify"
+        url="/services/research-projects"
+        image="/indianwebify.png"
+      />
+      <div className="min-h-screen bg-[#6d123f] ">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-20 bg-[#6d123f] text-[#e6961d]">
@@ -200,8 +209,9 @@ const ResearchProjects = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

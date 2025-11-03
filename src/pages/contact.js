@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,38 +16,73 @@ const Contact = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  // Initialize EmailJS (you can also initialize this in useEffect)
+  React.useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'W1wyUqR3E9pp4RfSz');
+  }, []);
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+    // Clear error when user starts typing
+    if (error) setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    }, 3000);
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || 'Not provided',
+        service: formData.service || 'Not specified',
+        message: formData.message,
+        to_email: 'shamimakhtarsheikh@gmail.com', // Your receiving email
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_bj9gqxp',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_72cof39',
+        templateParams
+      );
+
+      setIsSubmitted(true);
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      }, 3000);
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setError('Failed to send message. Please try again or contact us directly.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6 text-[#e6961d]" />,
       title: 'Phone',
-      details: ['+91 98765 43210', '+91 98765 43211'],
-      link: 'tel:+919876543210'
+      details: ['+91 9856876212'],
+      link: 'tel:+919856876212'
     },
     {
       icon: <Mail className="w-6 h-6 text-[#e6961d]" />,
@@ -77,8 +114,16 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
+    <>
+      <SEO
+        title="Contact Us - Indian Webify"
+        description="Get in touch with Indian Webify for website development, app development, AI solutions, and digital marketing services. Contact our expert team to discuss your project requirements."
+        keywords="contact Indian Webify, web development contact, app development services, digital marketing consultation, AI development inquiry"
+        url="/contact"
+        image="/indianwebify.png"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-[#6d123f] text-white">
@@ -105,7 +150,7 @@ const Contact = () => {
       {/* Contact Info & Form */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -118,7 +163,7 @@ const Contact = () => {
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#e6961d] rounded-lg flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12  rounded-lg flex items-center justify-center">
                       {info.icon}
                     </div>
                     <div>
@@ -169,6 +214,16 @@ const Contact = () => {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-start space-x-3"
+                    >
+                      <AlertCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                      <p className="text-sm">{error}</p>
+                    </motion.div>
+                  )}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -214,7 +269,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e6961d] focus:border-transparent"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 9856876212"
                       />
                     </div>
                     <div>
@@ -256,12 +311,22 @@ const Contact = () => {
 
                   <motion.button
                     type="submit"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-[#e6961d] text-white py-4 px-6 rounded-lg font-bold hover:bg-[#6d123f] transition-colors duration-300 flex items-center justify-center"
+                    disabled={isLoading}
+                    whileHover={{ scale: isLoading ? 1 : 1.02 }}
+                    whileTap={{ scale: isLoading ? 1 : 0.98 }}
+                    className="w-full bg-[#e6961d] text-white py-4 px-6 rounded-lg font-bold hover:bg-[#6d123f] transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 mr-2" />
+                        Send Message
+                      </>
+                    )}
                   </motion.button>
                 </form>
               )}
@@ -270,8 +335,9 @@ const Contact = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

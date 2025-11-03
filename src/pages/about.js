@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Globe, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -52,8 +53,16 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
+    <>
+      <SEO
+        title="About Us - Indian Webify"
+        description="Learn about Indian Webify - a premier digital services company dedicated to transforming businesses through cutting-edge technology, AI development, and comprehensive digital solutions. Meet our expert team."
+        keywords="about Indian Webify, digital services company, web development team, AI experts, digital transformation, technology solutions"
+        url="/about"
+        image="/indianwebify.png"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-[#6d123f] text-white">
@@ -236,8 +245,9 @@ const About = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 
 const Custom404 = () => {
   const containerVariants = {
@@ -27,8 +28,16 @@ const Custom404 = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
+    <>
+      <SEO
+        title="404 - Page Not Found | Indian Webify"
+        description="The page you are looking for could not be found. Return to Indian Webify homepage or browse our services."
+        url="/404"
+        noindex={true}
+        nofollow={true}
+      />
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
       <div className="flex-grow flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4">
         <motion.div
           className="container mx-auto max-w-4xl"
@@ -168,8 +177,9 @@ const Custom404 = () => {
           </div>
         </motion.div>
       </div>
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

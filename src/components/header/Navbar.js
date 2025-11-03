@@ -51,6 +51,17 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Close mobile menu on Escape key press
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [isMobileMenuOpen]);
+
   const menuItems = [
     {
       title: "Home",
@@ -165,12 +176,12 @@ const Navbar = () => {
             {/* Left Section */}
             <div className="hidden sm:flex items-center space-x-6">
               <a
-                href="tel:+1234567890"
+                href="tel:+919856876212"
                 className="flex items-center gap-1 hover:text-white/80 transition-colors"
                 aria-label="Contact phone number"
               >
                 <Phone className="h-3 w-3" aria-hidden="true" />
-                <span>+1234567890</span>
+                <span>+91 9856876212</span>
               </a>
               <a
                 href="mailto:info@jamiaassam.com"
@@ -316,7 +327,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors z-50 relative"
             aria-expanded={isMobileMenuOpen}
             aria-label="Toggle mobile menu"
           >
@@ -355,6 +366,7 @@ const Navbar = () => {
               style={{ height: "100dvh" }} // Using dynamic viewport height
               role="dialog"
               aria-modal="true"
+              onClick={(e) => e.stopPropagation()}
             >
               <div className="flex flex-col h-full">
                 {/* Menu Header */}
@@ -463,11 +475,11 @@ const Navbar = () => {
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <a
-                        href="tel:+919876543210"
+                        href="tel:+919856876212"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
                         <Phone className="h-4 w-4" />
-                        <span>+91 98765 43210</span>
+                        <span>+91 9856876212</span>
                       </a>
                       <a
                         href="mailto:info@indianwebify.com"

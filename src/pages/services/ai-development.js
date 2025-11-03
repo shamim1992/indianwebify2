@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Brain, CheckCircle, ArrowRight, Cpu, MessageSquare, Eye, Zap, BarChart3 } from 'lucide-react';
 
@@ -48,8 +49,16 @@ const AIDevelopment = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#6d123f] ">
-      <Navbar />
+    <>
+      <SEO
+        title="AI Development Services - Indian Webify"
+        description="Cutting-edge AI development services including machine learning models, NLP solutions, computer vision, AI chatbots, and AI integration. Transform your business with artificial intelligence."
+        keywords="AI development, machine learning, natural language processing, computer vision, AI chatbots, TensorFlow, PyTorch, AI integration, Indian Webify"
+        url="/services/ai-development"
+        image="/indianwebify.png"
+      />
+      <div className="min-h-screen bg-[#6d123f] ">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-20 bg-[#6d123f] text-[#e6961d]">
@@ -200,8 +209,9 @@ const AIDevelopment = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

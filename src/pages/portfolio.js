@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Computer, Smartphone, Brain, Search, Filter, ExternalLink } from 'lucide-react';
 
@@ -71,8 +72,16 @@ const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
+    <>
+      <SEO
+        title="Our Portfolio - Indian Webify"
+        description="Explore Indian Webify's portfolio of successful projects including web development, mobile apps, AI solutions, and digital marketing campaigns. See our work and client success stories."
+        keywords="Indian Webify portfolio, web development projects, mobile app examples, AI development projects, digital marketing case studies, client projects"
+        url="/portfolio"
+        image="/indianwebify.png"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-[#6d123f] text-white">
@@ -253,8 +262,9 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

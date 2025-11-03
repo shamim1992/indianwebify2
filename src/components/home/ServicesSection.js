@@ -79,7 +79,7 @@ const ServicesSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="py-16 px-8 bg-[#6d123f]">
+    <section className="md:py-16 md:px-8 bg-[#6d123f]">
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl font-bold text-center mb-2 text-[#e6961d]"
@@ -120,7 +120,7 @@ const ServicesSection = () => {
               <span className='text-[#e6961d] h-6 w-6'>{services[activeTab].icon}</span> 
               <span className="text-2xl font-semibold text-[#e6961d]">{services[activeTab].category}</span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {services[activeTab].items.map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -128,9 +128,9 @@ const ServicesSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.05, boxShadow: '0px 0px 15px rgba(230, 150, 29, 0.3)' }}
-                  className="rounded-lg p-6 transition-shadow duration-300 shadow-lg bg-white"
+                  className="rounded-lg p-4 transition-shadow duration-300 shadow-lg bg-white"
                 >
-                  <h4 className="mb-3 text-[#6d123f] font-bold text-lg">{item.title}</h4>
+                  <h4 className="mb-3 text-[#6d123f] font-bold text-center text-lg">{item.title}</h4>
                   <p className="text-sm text-gray-700 cursor-pointer leading-relaxed">{item.description}</p>
                 </motion.div>
               ))}

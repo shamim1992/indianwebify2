@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Search, CheckCircle, ArrowRight, Target, TrendingUp, Users, Mail, Share2 } from 'lucide-react';
 
@@ -48,8 +49,16 @@ const DigitalMarketing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#6d123f] ">
-      <Navbar />
+    <>
+      <SEO
+        title="Digital Marketing Services - Indian Webify"
+        description="Comprehensive digital marketing services including SEO, Google Ads, Facebook Ads, social media marketing, email marketing, and SEM. Increase your online visibility and drive growth."
+        keywords="digital marketing, SEO services, Google Ads, Facebook Ads, social media marketing, email marketing, SEM, SMO, Indian Webify"
+        url="/services/digital-marketing"
+        image="/indianwebify.png"
+      />
+      <div className="min-h-screen bg-[#6d123f] ">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-20 bg-[#6d123f] text-[#e6961d]">
@@ -200,8 +209,9 @@ const DigitalMarketing = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

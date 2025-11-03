@@ -31,9 +31,9 @@ const HeroSection = () => {
       description:
         "From stunning website designs to cutting-edge AI development and powerful digital marketing strategies, we help businesses establish a dominant online presence and drive success",
       cta: "Get Started",
-      ctaLink: "/programs",
+      ctaLink: "/contact",
       secondaryCta: "Our Services",
-      secondaryCtaLink: "/contact",
+      secondaryCtaLink: "/services/website-development",
       color: ""
     },
     {
@@ -43,9 +43,9 @@ const HeroSection = () => {
       description:
         "We craft high-performance websites and develop cutting-edge AI solutions that not only look amazing but also deliver intelligent automation and drive conversions.",
       cta: "View Portfolio",
-      ctaLink: "/courses",
+      ctaLink: "/portfolio",
       secondaryCta: "Contact Us",
-      secondaryCtaLink: "/about",
+      secondaryCtaLink: "/contact",
       color: ""
     },
     {
@@ -55,9 +55,9 @@ const HeroSection = () => {
       description:
         "Our AI development and research-based project solutions help you stay ahead of the curve. From machine learning models to academic research support, we turn innovative ideas into reality.",
       cta: "Learn More",
-      ctaLink: "/admissions",
+      ctaLink: "/services/ai-development",
       secondaryCta: "Schedule a Call",
-      secondaryCtaLink: "/requirements",
+      secondaryCtaLink: "/contact",
       color: ""
     },
   ];

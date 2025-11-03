@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Computer, CheckCircle, ArrowRight, Code, Globe, ShoppingCart, Building, FileText, Brain } from 'lucide-react';
 
@@ -63,8 +64,15 @@ const WebsiteDevelopment = () => {
 
   return (
     <>
-    <Navbar />
-    <div className="relative min-h-screen bg-[#6d123f]">
+      <SEO
+        title="Website Development Services - Indian Webify"
+        description="Professional website development services including ecommerce websites, hospital websites, billing systems, CMS websites, and AI-powered websites. Transform your business with custom web solutions."
+        keywords="website development, ecommerce website, hospital website, CMS development, custom websites, web design, responsive websites, Indian Webify"
+        url="/services/website-development"
+        image="/indianwebify.png"
+      />
+      <Navbar />
+      <div className="relative min-h-screen bg-[#6d123f]">
       
       
       {/* Hero Section */}
@@ -219,8 +227,8 @@ const WebsiteDevelopment = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
     </>
     
   );
