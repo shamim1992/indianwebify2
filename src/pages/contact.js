@@ -87,8 +87,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6 text-[#e6961d]" />,
       title: 'Email',
-      details: ['info@indianwebify.com', 'support@indianwebify.com'],
-      link: 'mailto:info@indianwebify.com'
+      details: ['mhsdigitalhub@gmail.com'],
+      link: 'mailto:mhsdigitalhub@gmail.com'
     },
     {
       icon: <MapPin className="w-6 h-6 text-[#e6961d]" />,
