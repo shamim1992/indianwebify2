@@ -93,7 +93,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6 text-[#e6961d]" />,
       title: 'Address',
-      details: ['123 Tech Park, Sector 15', 'Gurugram, Haryana 122001'],
+      details: ['Rajajinagar', 'Bangalore, Karnataka 560010'],
       link: '#'
     },
     {
