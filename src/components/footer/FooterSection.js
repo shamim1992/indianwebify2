@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
-  Youtube, 
-  ArrowRight, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube,
+  ArrowRight,
   Send,
   Heart,
   Calendar,
@@ -21,11 +21,11 @@ import {
 
 const FooterSection = () => {
   const currentYear = new Date().getFullYear();
-  
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
@@ -35,8 +35,8 @@ const FooterSection = () => {
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: { 
-      y: 0, 
+    visible: {
+      y: 0,
       opacity: 1,
       transition: { type: 'spring', stiffness: 100 }
     }
@@ -65,17 +65,17 @@ const FooterSection = () => {
 
   // Recent blog posts
   const recentPosts = [
-    { 
+    {
       title: 'Top 10 Web Design Trends in 2025',
       date: 'March 28, 2025',
       url: '/blog/web-design-trends-2025'
     },
-    { 
+    {
       title: 'How AI is Transforming App Development',
       date: 'March 15, 2025',
       url: '/blog/ai-transforming-app-development'
     },
-    { 
+    {
       title: 'Essential SEO Strategies for Small Businesses',
       date: 'March 02, 2025',
       url: '/blog/seo-strategies-small-businesses'
@@ -91,7 +91,7 @@ const FooterSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
           variants={containerVariants}
           initial="hidden"
@@ -117,7 +117,7 @@ const FooterSection = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-[#e6961d] mt-1 flex-shrink-0" />
                 <div>
@@ -127,14 +127,14 @@ const FooterSection = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-[#e6961d] mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
                   <address className="text-white not-italic">
-                    123 Tech Park, Sector 15<br />
-                    Gurugram, Haryana 122001
+                    Rajajinagar<br />
+                    Bengaluru, Karnataka 560010
                   </address>
                 </div>
               </div>
@@ -150,8 +150,8 @@ const FooterSection = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index} className="group">
-                  <Link 
-                    href={link.url} 
+                  <Link
+                    href={link.url}
                     className="flex items-center text-gray-300 hover:text-[#e6961d] transition-colors duration-300"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 transform group-hover:translate-x-1 transition-transform duration-300" />
@@ -168,8 +168,8 @@ const FooterSection = () => {
             <ul className="space-y-3">
               {servicesLinks.map((link, index) => (
                 <li key={index} className="group">
-                  <Link 
-                    href={link.url} 
+                  <Link
+                    href={link.url}
                     className="flex items-center text-gray-300 hover:text-[#e6961d] transition-colors duration-300"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 transform group-hover:translate-x-1 transition-transform duration-300" />
@@ -188,8 +188,8 @@ const FooterSection = () => {
             </h3>
             <div className="space-y-4">
               {recentPosts.map((post, index) => (
-                <Link 
-                  key={index} 
+                <Link
+                  key={index}
                   href={post.url}
                   className="block group"
                 >
@@ -205,8 +205,8 @@ const FooterSection = () => {
                 </Link>
               ))}
             </div>
-            <Link 
-              href="/blog" 
+            <Link
+              href="/blog"
               className="inline-flex items-center text-[#e6961d] mt-4 hover:text-white transition-colors duration-300"
             >
               View all posts
@@ -225,53 +225,53 @@ const FooterSection = () => {
             </p>
             <form className="mb-8">
               <div className="flex items-center">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
+                <input
+                  type="email"
+                  placeholder="Your email address"
                   className="bg-gray-800 bg-opacity-50 text-white px-4 py-3 rounded-l-lg w-full outline-none focus:ring-2 focus:ring-[#e6961d] border-none"
                   required
                 />
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="bg-[#e6961d] hover:bg-[#6d123f] px-4 py-3 rounded-r-lg transition-colors duration-300"
                 >
                   <Send className="w-5 h-5" />
                 </button>
               </div>
             </form>
-            
+
             <h3 className="text-xl font-bold mb-4 text-white">Follow Us</h3>
             <div className="flex space-x-3">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#e6961d] transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#e6961d] transition-colors duration-300"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#e6961d] transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#e6961d] transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#e6961d] transition-colors duration-300"
                 aria-label="YouTube"
               >
@@ -292,7 +292,7 @@ const FooterSection = () => {
               <p className="text-sm text-gray-400">Our top priority</p>
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center">
               <Shield className="w-6 h-6 text-[#e6961d]" />
@@ -302,7 +302,7 @@ const FooterSection = () => {
               <p className="text-sm text-gray-400">Top-notch security</p>
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center">
               <FileText className="w-6 h-6 text-[#e6961d]" />
@@ -312,7 +312,7 @@ const FooterSection = () => {
               <p className="text-sm text-gray-400">Tailored to your needs</p>
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center">
               <Headphones className="w-6 h-6 text-[#e6961d]" />
@@ -327,7 +327,7 @@ const FooterSection = () => {
         {/* Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center py-8 border-t border-gray-800 text-sm">
           <p className="text-gray-400 mb-4 md:mb-0">
-           Copyright © {currentYear} Indian Webify. All rights reserved.
+            Copyright © {currentYear} Indian Webify. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center space-x-4">
             <Link href="/privacy-policy" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
@@ -342,7 +342,7 @@ const FooterSection = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Back to top button */}
       <motion.a
         href="#top"
