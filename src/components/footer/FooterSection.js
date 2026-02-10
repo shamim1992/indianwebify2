@@ -330,7 +330,7 @@ const FooterSection = () => {
             Copyright © {currentYear} Indian Webify. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center space-x-4">
-            <Link href="/privacy-policy" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
+            <Link href="/privacy/wireless-mouse-and-keyboard-bt" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
               Privacy Policy
             </Link>
             <Link href="/terms-of-service" className="text-gray-400 hover:text-[#e6961d] transition-colors duration-300 mb-2 md:mb-0">
