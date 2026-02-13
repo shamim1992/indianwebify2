@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
-import { motion } from 'framer-motion';
 import { Computer, Smartphone, Brain, Search, Filter, ExternalLink } from 'lucide-react';
 
 const Portfolio = () => {
@@ -86,11 +85,8 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-[#6d123f] text-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+          <div
+            className="text-center max-w-4xl mx-auto animate-fade-in-up"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Our Portfolio
@@ -101,18 +97,15 @@ const Portfolio = () => {
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
               Explore our diverse portfolio of digital solutions that have helped businesses achieve their goals and drive growth.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Filter Section */}
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-4"
+          <div
+            className="flex flex-wrap justify-center gap-4 animate-fade-in-up"
           >
             {filters.map((filter) => (
               <button
@@ -127,25 +120,20 @@ const Portfolio = () => {
                 {filter}
               </button>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Portfolio Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            layout
+          <div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredProjects.map((project, index) => (
-              <motion.div
+              <div
                 key={project.id}
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fade-in-up"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -190,26 +178,23 @@ const Portfolio = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fade-in-up"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Achievements
             </h2>
             <div className="w-20 h-1 bg-[#e6961d] mx-auto mb-6"></div>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
@@ -218,12 +203,9 @@ const Portfolio = () => {
               { number: '50+', label: 'Countries Served' },
               { number: '99%', label: 'Client Satisfaction' }
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                className="text-center animate-fade-in-up"
               >
                 <div className="text-4xl md:text-5xl font-bold text-[#e6961d] mb-2">
                   {stat.number}
@@ -231,7 +213,7 @@ const Portfolio = () => {
                 <div className="text-gray-600">
                   {stat.label}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -240,25 +222,19 @@ const Portfolio = () => {
       {/* CTA Section */}
       <section className="py-16 bg-[#6d123f] text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Let&apos;s create something amazing together. Contact us to discuss your project requirements.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-[#6d123f] rounded-full font-bold hover:bg-gray-100 transition-colors duration-300"
+            <button
+              className="px-8 py-4 bg-white text-[#6d123f] rounded-full font-bold hover:bg-gray-100 transition-colors duration-300 hover-scale"
             >
               Start Your Project
-            </motion.button>
-          </motion.div>
+            </button>
+          </div>
         </div>
       </section>
 

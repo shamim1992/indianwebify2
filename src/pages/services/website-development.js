@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
-import { motion } from 'framer-motion';
 import { Computer, CheckCircle, ArrowRight, Code, Globe, ShoppingCart, Building, FileText, Brain } from 'lucide-react';
 
 const WebsiteDevelopment = () => {
@@ -78,11 +77,8 @@ const WebsiteDevelopment = () => {
       {/* Hero Section */}
       <section className=" pt-24 pb-20 bg-[#6d123f] text-[#e6961d]">
         <div className="container mx-auto px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+          <div
+            className="text-center max-w-4xl mx-auto animate-fade-in-up"
           >
             <div className="flex justify-center mb-6">
               <Computer className="w-16 h-16 text-[#e6961d]" />
@@ -96,18 +92,15 @@ const WebsiteDevelopment = () => {
             <p className="text-lg text-white max-w-3xl mx-auto">
               We create stunning, responsive websites that not only look amazing but also deliver exceptional user experiences and drive business growth.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fade-in-up"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#6d123f] mb-4">
               Our Website Development Services
@@ -116,16 +109,13 @@ const WebsiteDevelopment = () => {
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               From simple business websites to complex e-commerce platforms, we deliver solutions that meet your unique needs.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-[#e6961d]"
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-[#e6961d] animate-fade-in-up"
               >
                 <div className="flex items-center mb-4">
                   {service.icon}
@@ -144,7 +134,7 @@ const WebsiteDevelopment = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -153,11 +143,8 @@ const WebsiteDevelopment = () => {
       {/* Process Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fade-in-up"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#6d123f] mb-4">
               Our Development Process
@@ -166,16 +153,13 @@ const WebsiteDevelopment = () => {
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               We follow a proven process to ensure your website is delivered on time and exceeds expectations.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                className="text-center animate-fade-in-up"
               >
                 <div className="w-16 h-16 bg-[#e6961d] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {step.step}
@@ -186,7 +170,7 @@ const WebsiteDevelopment = () => {
                 <p className="text-gray-700">
                   {step.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -195,11 +179,7 @@ const WebsiteDevelopment = () => {
       {/* CTA Section */}
       <section className="py-20 bg-[#6d123f] text-white">
         <div className="container mx-auto px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#e6961d]">
               Ready to Build Your Dream Website?
             </h2>
@@ -207,23 +187,19 @@ const WebsiteDevelopment = () => {
               Let&apos;s discuss your project and create a website that drives results for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 bg-[#e6961d] text-white rounded-full font-bold hover:bg-white hover:text-[#6d123f] transition-colors duration-300 flex items-center justify-center shadow-lg"
+              <button
+                className="px-10 py-4 bg-[#e6961d] text-white rounded-full font-bold hover:bg-white hover:text-[#6d123f] transition-colors duration-300 flex items-center justify-center shadow-lg hover-scale"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 border-2 border-[#e6961d] text-[#e6961d] rounded-full font-bold hover:bg-[#e6961d] hover:text-white transition-colors duration-300 shadow-lg"
+              </button>
+              <button
+                className="px-10 py-4 border-2 border-[#e6961d] text-[#e6961d] rounded-full font-bold hover:bg-[#e6961d] hover:text-white transition-colors duration-300 shadow-lg hover-scale"
               >
                 View Portfolio
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

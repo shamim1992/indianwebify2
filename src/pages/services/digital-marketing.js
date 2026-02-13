@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
-import { motion } from 'framer-motion';
 import { Search, CheckCircle, ArrowRight, Target, TrendingUp, Users, Mail, Share2 } from 'lucide-react';
 
 const DigitalMarketing = () => {
@@ -63,11 +62,8 @@ const DigitalMarketing = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-20 bg-[#6d123f] text-[#e6961d]">
         <div className="container mx-auto px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+          <div
+            className="text-center max-w-4xl mx-auto animate-fade-in-up"
           >
             <div className="flex justify-center mb-6">
               <Search className="w-16 h-16 text-[#e6961d]" />
@@ -81,18 +77,15 @@ const DigitalMarketing = () => {
             <p className="text-lg text-white max-w-3xl mx-auto">
               We create comprehensive digital marketing campaigns that increase your online visibility, engage your audience, and drive measurable results.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fade-in-up"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#6d123f] mb-4">
               Our Digital Marketing Services
@@ -101,16 +94,13 @@ const DigitalMarketing = () => {
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               From SEO to social media marketing, we provide comprehensive digital marketing solutions that deliver results.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-[#e6961d]"
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-[#e6961d] animate-fade-in-up"
               >
                 <div className="flex items-center mb-4">
                   {service.icon}
@@ -129,7 +119,7 @@ const DigitalMarketing = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -138,11 +128,8 @@ const DigitalMarketing = () => {
       {/* Platforms Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fade-in-up"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#6d123f] mb-4">
               Marketing Platforms
@@ -151,16 +138,13 @@ const DigitalMarketing = () => {
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               We manage campaigns across all major digital marketing platforms to maximize your reach and ROI.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {platforms.map((platform, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-lg p-8 text-center hover:bg-[#e6961d] hover:text-white transition-colors duration-300 shadow-lg border border-gray-200"
+                className="bg-white rounded-lg p-8 text-center hover:bg-[#e6961d] hover:text-white transition-colors duration-300 shadow-lg border border-gray-200 animate-fade-in-up"
               >
                 <h3 className="text-xl font-bold text-[#6d123f] mb-2">
                   {platform.name}
@@ -168,7 +152,7 @@ const DigitalMarketing = () => {
                 <p className="text-gray-700">
                   {platform.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -177,11 +161,7 @@ const DigitalMarketing = () => {
       {/* CTA Section */}
       <section className="py-20 bg-[#6d123f] text-white">
         <div className="container mx-auto px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#e6961d]">
               Ready to Boost Your Digital Presence?
             </h2>
@@ -189,23 +169,19 @@ const DigitalMarketing = () => {
               Let&apos;s create a digital marketing strategy that drives traffic, engagement, and conversions for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 bg-[#e6961d] text-white rounded-full font-bold hover:bg-white hover:text-[#6d123f] transition-colors duration-300 flex items-center justify-center shadow-lg"
+              <button
+                className="px-10 py-4 bg-[#e6961d] text-white rounded-full font-bold hover:bg-white hover:text-[#6d123f] transition-colors duration-300 flex items-center justify-center shadow-lg hover-scale"
               >
                 Get Marketing Strategy
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 border-2 border-[#e6961d] text-[#e6961d] rounded-full font-bold hover:bg-[#e6961d] hover:text-white transition-colors duration-300 shadow-lg"
+              </button>
+              <button
+                className="px-10 py-4 border-2 border-[#e6961d] text-[#e6961d] rounded-full font-bold hover:bg-[#e6961d] hover:text-white transition-colors duration-300 shadow-lg hover-scale"
               >
                 View Case Studies
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

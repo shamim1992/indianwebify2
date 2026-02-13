@@ -1,14 +1,15 @@
-import FooterSection from '@/components/footer/FooterSection'
 import Navbar from '@/components/header/Navbar'
-import AboutUsSection from '@/components/home/AboutUsSection'
 import HeroSection from '@/components/home/HeroSection'
-import OurClientsSection from '@/components/home/OurClientsSection'
-import PortfolioSection from '@/components/home/PortfolioSection'
-import ProcessSection from '@/components/home/ProcessSection'
-import ServicesSection from '@/components/home/ServicesSection'
-import WhyChooseUsSection from '@/components/home/WhyChooseUsSection'
 import SEO from '@/components/SEO'
 import React from 'react'
+import dynamic from 'next/dynamic'
+
+const ServicesSection = dynamic(() => import('@/components/home/ServicesSection'))
+const WhyChooseUsSection = dynamic(() => import('@/components/home/WhyChooseUsSection'))
+const AboutUsSection = dynamic(() => import('@/components/home/AboutUsSection'))
+const PortfolioSection = dynamic(() => import('@/components/home/PortfolioSection'))
+const ProcessSection = dynamic(() => import('@/components/home/ProcessSection'))
+const FooterSection = dynamic(() => import('@/components/footer/FooterSection'))
 
 const Home = () => {
   return (
@@ -27,7 +28,6 @@ const Home = () => {
         <WhyChooseUsSection />
         <AboutUsSection/>
         <PortfolioSection/>
-        {/* <OurClientsSection/> */}
         <ProcessSection/>
         <FooterSection/>
       </div>

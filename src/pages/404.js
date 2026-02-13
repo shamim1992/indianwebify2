@@ -1,32 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
+import { Home, ArrowLeft, HelpCircle } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
 
 const Custom404 = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
   return (
     <>
       <SEO
@@ -39,88 +18,40 @@ const Custom404 = () => {
       <div className="min-h-screen flex flex-col">
         <Navbar />
       <div className="flex-grow flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4">
-        <motion.div
-          className="container mx-auto max-w-4xl"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <div className="container mx-auto max-w-4xl animate-fade-in-up">
           <div className="text-center">
             {/* 404 Number */}
-            <motion.div
-              variants={itemVariants}
-              className="mb-8"
-            >
-              <motion.h1
-                className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-[#e6961d] to-[#6d123f] bg-clip-text text-transparent"
-                animate={{
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
+            <div className="mb-8">
+              <h1 className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-[#e6961d] to-[#6d123f] bg-clip-text text-transparent animate-pulse-ring">
                 404
-              </motion.h1>
-            </motion.div>
+              </h1>
+            </div>
 
             {/* Error Message */}
-            <motion.div variants={itemVariants} className="mb-8">
-              <motion.h2
-                className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-              >
+            <div className="mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 animate-fade-in-up delay-200">
                 Page Not Found
-              </motion.h2>
-              <motion.p
-                className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-              >
-                Oops! The page you&apos;re looking for seems to have wandered off. 
+              </h2>
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-300">
+                Oops! The page you&apos;re looking for seems to have wandered off.
                 Don&apos;t worry, let&apos;s get you back on track.
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
             {/* Icon */}
-            <motion.div
-              variants={itemVariants}
-              className="mb-12"
-            >
-              <motion.div
-                className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-gradient-to-r from-[#e6961d] to-[#6d123f] mb-6"
-                animate={{
-                  rotate: [0, 10, -10, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
+            <div className="mb-12 animate-fade-in-up delay-400">
+              <div className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-gradient-to-r from-[#e6961d] to-[#6d123f] mb-6">
                 <HelpCircle className="w-16 h-16 text-white" />
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Action Buttons */}
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-up delay-500">
               <Link href="/">
-                <motion.button
-                  className="px-8 py-4 bg-gradient-to-r from-[#e6961d] to-[#6d123f] text-white font-bold rounded-full flex items-center gap-2 hover:shadow-lg transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
+                <button className="px-8 py-4 bg-gradient-to-r from-[#e6961d] to-[#6d123f] text-white font-bold rounded-full flex items-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95">
                   <Home className="w-5 h-5" />
                   Go to Homepage
-                </motion.button>
+                </button>
               </Link>
 
               <button
@@ -130,13 +61,10 @@ const Custom404 = () => {
                 <ArrowLeft className="w-5 h-5" />
                 Go Back
               </button>
-            </motion.div>
+            </div>
 
             {/* Quick Links */}
-            <motion.div
-              variants={itemVariants}
-              className="mt-16"
-            >
+            <div className="mt-16 animate-fade-in-up delay-600">
               <h3 className="text-xl font-semibold text-gray-800 mb-6">
                 Popular Pages
               </h3>
@@ -173,9 +101,9 @@ const Custom404 = () => {
                   Contact
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
         <FooterSection />
       </div>
@@ -184,4 +112,3 @@ const Custom404 = () => {
 };
 
 export default Custom404;
-

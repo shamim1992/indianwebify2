@@ -1,10 +1,6 @@
-
-
-
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Computer, Phone, Search, Smartphone, Brain, Microscope } from 'lucide-react';
-
+import { Code2, Computer, Search, Smartphone, Brain, Microscope } from 'lucide-react';
+import useInView from '@/hooks/useInView';
 
 const services = [
   {
@@ -77,20 +73,16 @@ const services = [
 
 const ServicesSection = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [ref, inView] = useInView();
 
   return (
     <section className="md:py-16 md:px-8 bg-[#6d123f]">
-      <div className="container mx-auto px-6">
-        <motion.h2
-          className="text-4xl font-bold text-center mb-2 text-[#e6961d]"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+      <div className="container mx-auto px-6" ref={ref}>
+        <h2 className={`text-4xl font-bold text-center mb-2 text-[#e6961d] ${inView ? 'animate-fade-in-down' : 'opacity-0'}`}>
           Our <span className="text-white">Services</span>
-        </motion.h2>
+        </h2>
         <div className="w-20 h-1 bg-[#e6961d] mx-auto mb-4"></div>
-        
+
         <div className="flex flex-wrap justify-center mb-8">
           {services.map((service, index) => (
             <button
@@ -107,36 +99,24 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="rounded-lg p-2"
-          >
-            <div className="text-center mb-8 flex items-center justify-center gap-3">
-              <span className='text-[#e6961d] h-6 w-6'>{services[activeTab].icon}</span> 
-              <span className="text-2xl font-semibold text-[#e6961d]">{services[activeTab].category}</span>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {services[activeTab].items.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, boxShadow: '0px 0px 15px rgba(230, 150, 29, 0.3)' }}
-                  className="rounded-lg p-4 transition-shadow duration-300 shadow-lg bg-white"
-                >
-                  <h4 className="mb-3 text-[#6d123f] font-bold text-center text-lg">{item.title}</h4>
-                  <p className="text-sm text-gray-700 cursor-pointer leading-relaxed">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        <div className="rounded-lg p-2 animate-fade-in" key={activeTab}>
+          <div className="text-center mb-8 flex items-center justify-center gap-3">
+            <span className='text-[#e6961d] h-6 w-6'>{services[activeTab].icon}</span>
+            <span className="text-2xl font-semibold text-[#e6961d]">{services[activeTab].category}</span>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {services[activeTab].items.map((item, index) => (
+              <div
+                key={item.title}
+                className="rounded-lg p-4 transition-all duration-300 shadow-lg bg-white hover:scale-105 hover:shadow-[0px_0px_15px_rgba(230,150,29,0.3)] animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <h4 className="mb-3 text-[#6d123f] font-bold text-center text-lg">{item.title}</h4>
+                <p className="text-sm text-gray-700 cursor-pointer leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

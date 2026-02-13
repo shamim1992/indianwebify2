@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
-import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Bluetooth, Bell, Smartphone, Info, Mail, ShieldCheck } from 'lucide-react';
 
 const PrivacyPolicy = () => {
@@ -52,7 +51,7 @@ const PrivacyPolicy = () => {
                         <li>Ad interaction data (impressions and clicks)</li>
                     </ul>
                     <p className="text-gray-600 mb-4">
-                        This information is collected and processed by Google according to Google’s Privacy Policy:
+                        This information is collected and processed by Google according to Google's Privacy Policy:
                         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#e6961d] hover:underline ml-1">
                             https://policies.google.com/privacy
                         </a>
@@ -129,7 +128,7 @@ const PrivacyPolicy = () => {
 
     const additionalSections = [
         { title: "7. Children's Privacy", content: "The App is not intended for children under 13. We do not knowingly collect personal information from children." },
-        { title: "8. Security", content: "Because the App does not collect or store personal data externally, the risk of data breach is minimized. Bluetooth communication relies on Android’s built-in security protocols." },
+        { title: "8. Security", content: "Because the App does not collect or store personal data externally, the risk of data breach is minimized. Bluetooth communication relies on Android's built-in security protocols." },
         {
             title: "9. Your Controls", content: (
                 <>
@@ -143,7 +142,7 @@ const PrivacyPolicy = () => {
                 </>
             )
         },
-        { title: "10. Changes to This Policy", content: "We may update this Privacy Policy periodically. Updates will be reflected by revising the “Last Updated” date." },
+        { title: "10. Changes to This Policy", content: "We may update this Privacy Policy periodically. Updates will be reflected by revising the \u201CLast Updated\u201D date." },
         {
             title: "11. Contact", content: (
                 <div className="flex items-center space-x-2 text-gray-600">
@@ -169,31 +168,21 @@ const PrivacyPolicy = () => {
                 {/* Hero Header */}
                 <section className="pt-32 pb-16 bg-[#6d123f] text-white">
                     <div className="container mx-auto px-4">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            className="text-center max-w-4xl mx-auto"
-                        >
+                        <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
                             <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
                             <p className="text-xl text-[#e6961d] font-semibold mb-2">Wireless Mouse & Keyboard BT</p>
                             <p className="text-white/70">Last Updated: February 10, 2026</p>
-                        </motion.div>
+                        </div>
                     </div>
                 </section>
 
                 {/* Content Section */}
                 <section className="py-16 flex-grow">
                     <div className="container mx-auto px-4 max-w-4xl">
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.3 }}
-                            className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
-                        >
+                        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 animate-fade-in-up delay-200">
                             <div className="p-8 md:p-12">
                                 <p className="text-lg text-gray-700 mb-12 leading-relaxed">
-                                    <strong>Wireless Mouse & Keyboard BT</strong> (“the App”, “we”, “our”) respects your privacy. This Privacy Policy explains how information is handled when you use the App.
+                                    <strong>Wireless Mouse & Keyboard BT</strong> ("the App", "we", "our") respects your privacy. This Privacy Policy explains how information is handled when you use the App.
                                 </p>
 
                                 <div className="space-y-12">
@@ -223,7 +212,7 @@ const PrivacyPolicy = () => {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
 
 
                     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, Award, Clock, ThumbsUp, Users, Shield } from 'lucide-react';
+import useInView from '@/hooks/useInView';
 
 const advantages = [
   {
@@ -37,56 +37,32 @@ const advantages = [
 
 const WhyChooseUsSection = () => {
   const [activeAdvantage, setActiveAdvantage] = useState(null);
+  const [ref, inView] = useInView();
 
   return (
     <section className="py-10 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <motion.h2
-          className="text-4xl font-bold text-center mb-2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+      <div className="container mx-auto px-4" ref={ref}>
+        <h2 className={`text-4xl font-bold text-center mb-2 ${inView ? 'animate-fade-in-down' : 'opacity-0'}`}>
           Why <span className="text-[#6d123f]">Choose Us</span>
-        </motion.h2>
+        </h2>
         <div className="w-20 h-1 bg-[#e6961d] mx-auto mb-4"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {advantages.map((advantage, index) => (
-            <motion.div
+            <div
               key={advantage.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ 
-                scale: 1.03, 
-                boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.1)'
-              }}
-              className="bg-white rounded-lg p-6 shadow cursor-pointer"
+              className={`bg-white rounded-lg p-6 shadow cursor-pointer hover-scale ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => setActiveAdvantage(activeAdvantage === index ? null : index)}
             >
               <div className="flex items-center mb-4">
                 <span className="text-[#e6961d] mr-3">{advantage.icon}</span>
                 <h3 className="text-xl font-bold text-[#6d123f]">{advantage.title}</h3>
               </div>
-              
-              <AnimatePresence>
-                <motion.p 
-                  initial={{ opacity: 1 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="text-gray-700"
-                >
-                  {advantage.description}
-                </motion.p>
-              </AnimatePresence>
-              
+
+              <p className="text-gray-700">{advantage.description}</p>
+
               {activeAdvantage === index && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="mt-4 pt-4 border-t border-gray-200"
-                >
+                <div className="mt-4 pt-4 border-t border-gray-200 animate-fade-in">
                   <ul className="space-y-2">
                     {[...Array(3)].map((_, i) => (
                       <li key={i} className="flex items-center">
@@ -99,22 +75,17 @@ const WhyChooseUsSection = () => {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-        >
+        <div className={`text-center mt-12 ${inView ? 'animate-fade-in delay-800' : 'opacity-0'}`}>
           <button className="px-8 py-3 bg-[#e6961d] text-white font-bold rounded-full hover:bg-[#6d123f] transition-colors duration-300">
             Contact Us Today
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

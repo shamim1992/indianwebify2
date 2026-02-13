@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
-import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
 
 const Blog = () => {
@@ -92,11 +91,8 @@ const Blog = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-[#6d123f] text-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+          <div
+            className="text-center max-w-4xl mx-auto animate-fade-in-up"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Our Blog
@@ -107,18 +103,15 @@ const Blog = () => {
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
               Stay updated with the latest trends, technologies, and best practices in web development, AI, and digital marketing.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Featured Post */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-lg shadow-lg overflow-hidden mb-16"
+          <div
+            className="bg-white rounded-lg shadow-lg overflow-hidden mb-16 animate-fade-in-up"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               <div className="relative h-64 lg:h-full">
@@ -163,33 +156,27 @@ const Blog = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Blog Posts Grid */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fade-in-up"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Latest Articles
             </h2>
             <div className="w-20 h-1 bg-[#e6961d] mx-auto mb-6"></div>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.slice(1).map((post, index) => (
-              <motion.article
+              <article
                 key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fade-in-up"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -246,7 +233,7 @@ const Blog = () => {
                     ))}
                   </div>
                 </div>
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
@@ -255,11 +242,8 @@ const Blog = () => {
       {/* Newsletter Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-2xl mx-auto"
+          <div
+            className="text-center max-w-2xl mx-auto animate-fade-in-up"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Stay Updated
@@ -277,7 +261,7 @@ const Blog = () => {
                 Subscribe
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

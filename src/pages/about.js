@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
-import { motion } from 'framer-motion';
 import { Users, Target, Award, Globe, CheckCircle, ArrowRight } from 'lucide-react';
 
 const About = () => {
@@ -67,11 +66,8 @@ const About = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-[#6d123f] text-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+          <div
+            className="text-center max-w-4xl mx-auto animate-fade-in-up"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               About Indian Webify
@@ -82,7 +78,7 @@ const About = () => {
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
               We are a premier digital services company dedicated to transforming businesses through cutting-edge technology, AI development, and comprehensive digital solutions.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -90,11 +86,7 @@ const About = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div className="animate-fade-in-up">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Our Story
               </h2>
@@ -108,17 +100,12 @@ const About = () => {
               <p className="text-lg text-gray-600">
                 We have successfully delivered over 200 projects for clients across various industries, helping them achieve their digital transformation goals and drive sustainable growth.
               </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
+            </div>
+            <div className="relative animate-fade-in-up">
               <div className="w-full h-96 bg-gray-200 rounded-lg relative overflow-hidden shadow-lg">
                 <img src="/indianwebify.png" alt="Indian Webify Team" className="w-full h-full object-cover" />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -126,11 +113,8 @@ const About = () => {
       {/* Values Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fade-in-up"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Values
@@ -139,16 +123,13 @@ const About = () => {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our core values guide everything we do and shape our approach to client relationships and project delivery.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                className="text-center animate-fade-in-up"
               >
                 <div className="flex justify-center mb-4">
                   {value.icon}
@@ -159,7 +140,7 @@ const About = () => {
                 <p className="text-gray-600">
                   {value.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -168,11 +149,8 @@ const About = () => {
       {/* Team Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fade-in-up"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Team
@@ -181,16 +159,13 @@ const About = () => {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our diverse team of experts brings together years of experience in technology, design, and business strategy.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 animate-fade-in-up"
               >
                 <div className="w-20 h-20 bg-[#e6961d] rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Users className="w-10 h-10 text-white" />
@@ -204,7 +179,7 @@ const About = () => {
                 <p className="text-gray-600 text-sm">
                   {member.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -213,11 +188,7 @@ const About = () => {
       {/* CTA Section */}
       <section className="py-16 bg-[#6d123f] text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Work With Us?
             </h2>
@@ -225,23 +196,19 @@ const About = () => {
               Let&apos;s discuss your project and see how we can help you achieve your digital transformation goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-[#6d123f] rounded-full font-bold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center"
+              <button
+                className="px-8 py-4 bg-white text-[#6d123f] rounded-full font-bold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center hover-scale"
               >
                 Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-[#6d123f] transition-colors duration-300"
+              </button>
+              <button
+                className="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-[#6d123f] transition-colors duration-300 hover-scale"
               >
                 View Our Services
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
