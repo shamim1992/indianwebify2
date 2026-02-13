@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
         {/* Default Favicon */}
         <link rel="icon" type="image/png" href="/logo2.png" />
         <link rel="apple-touch-icon" href="/logo2.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        {/* <link rel="manifest" href="/site.webmanifest" /> */}
       </Head>
       <main className='font-sans'>
         <Component {...pageProps} />
