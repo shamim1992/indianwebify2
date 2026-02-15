@@ -84,7 +84,8 @@ const HeroSection = () => {
             src={slide.image}
             alt={slide.title}
             fill
-            priority={index === 0}
+            loading={index === 0 ? "eager" : "lazy"}
+            fetchPriority={index === 0 ? "high" : "low"}
             className="object-cover"
             sizes="100vw"
             quality={75}
