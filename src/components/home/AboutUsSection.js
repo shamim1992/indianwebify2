@@ -64,7 +64,7 @@ const AboutUsSection = () => {
             <div className={`grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8 ${inView ? 'animate-fade-in-up delay-400' : 'opacity-0'}`}>
               {stats.map((stat, index) => (
                 <div key={index} className="text-center p-3 rounded-lg bg-gray-50 shadow-sm">
-                  <h3 className="text-2xl font-bold text-[#e6961d]">{stat.value}</h3>
+                  <h3 className="text-2xl font-bold text-[#b45309]">{stat.value}</h3>
                   <p className="text-sm text-gray-600">{stat.label}</p>
                 </div>
               ))}
@@ -85,7 +85,7 @@ const AboutUsSection = () => {
             </div>
 
             {/* CTA Button */}
-            <button className={`px-8 py-3 bg-[#e6961d] text-white font-bold rounded-full hover:bg-[#6d123f] hover:scale-105 active:scale-95 transition-all duration-300 ${inView ? 'animate-fade-in delay-700' : 'opacity-0'}`}>
+            <button className={`px-8 py-3 bg-[#b45309] text-white font-bold rounded-full hover:bg-[#6d123f] hover:scale-105 active:scale-95 transition-all duration-300 ${inView ? 'animate-fade-in delay-700' : 'opacity-0'}`}>
               Learn More About Our Journey
             </button>
           </div>

@@ -157,7 +157,7 @@ const FooterSection = () => {
             <form className="mb-8">
               <div className="flex items-center">
                 <input type="email" placeholder="Your email address" className="bg-gray-800 bg-opacity-50 text-white px-4 py-3 rounded-l-lg w-full outline-none focus:ring-2 focus:ring-[#e6961d] border-none" required />
-                <button type="submit" className="bg-[#e6961d] hover:bg-[#6d123f] px-4 py-3 rounded-r-lg transition-colors duration-300">
+                <button type="submit" className="bg-[#b45309] hover:bg-[#6d123f] px-4 py-3 rounded-r-lg transition-colors duration-300" aria-label="Subscribe to newsletter">
                   <Send className="w-5 h-5" />
                 </button>
               </div>
@@ -209,7 +209,7 @@ const FooterSection = () => {
       </div>
 
       {/* Back to top button */}
-      <a href="#top" className="w-12 h-12 rounded-full bg-[#e6961d] fixed bottom-8 right-8 flex items-center justify-center shadow-lg z-50 hover:scale-110 active:scale-90 transition-transform duration-300">
+      <a href="#top" className="w-12 h-12 rounded-full bg-[#b45309] fixed bottom-8 right-8 flex items-center justify-center shadow-lg z-50 hover:scale-110 active:scale-90 transition-transform duration-300" aria-label="Back to top">
         <ArrowRight className="w-6 h-6 text-white transform -rotate-90" />
       </a>
     </footer>

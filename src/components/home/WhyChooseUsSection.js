@@ -82,7 +82,7 @@ const WhyChooseUsSection = () => {
         </div>
 
         <div className={`text-center mt-12 ${inView ? 'animate-fade-in delay-800' : 'opacity-0'}`}>
-          <button className="px-8 py-3 bg-[#e6961d] text-white font-bold rounded-full hover:bg-[#6d123f] transition-colors duration-300">
+          <button className="px-8 py-3 bg-[#b45309] text-white font-bold rounded-full hover:bg-[#6d123f] transition-colors duration-300">
             Contact Us Today
           </button>
         </div>

@@ -90,8 +90,8 @@ const ServicesSection = () => {
               onClick={() => setActiveTab(index)}
               className={`px-6 py-3 font-bold shadow m-2 rounded-full transition-colors duration-300 ${
                 activeTab === index
-                  ? 'bg-[#e6961d] text-white'
-                  : 'bg-white text-[#6d123f] hover:bg-[#e6961d] hover:text-white border-2 border-[#e6961d]'
+                  ? 'bg-[#b45309] text-white'
+                  : 'bg-white text-[#6d123f] hover:bg-[#b45309] hover:text-white border-2 border-[#b45309]'
               }`}
             >
               {service.category}
@@ -111,7 +111,7 @@ const ServicesSection = () => {
                 className="rounded-lg p-4 transition-all duration-300 shadow-lg bg-white hover:scale-105 hover:shadow-[0px_0px_15px_rgba(230,150,29,0.3)] animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h4 className="mb-3 text-[#6d123f] font-bold text-center text-lg">{item.title}</h4>
+                <h3 className="mb-3 text-[#6d123f] font-bold text-center text-lg">{item.title}</h3>
                 <p className="text-sm text-gray-700 cursor-pointer leading-relaxed">{item.description}</p>
               </div>
             ))}

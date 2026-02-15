@@ -111,7 +111,7 @@ const ProcessSection = () => {
 
                   <div className={`accordion-content ${activeStep === step.id ? 'open' : ''}`}>
                     <div className="border-t border-gray-200 pt-5 mt-2">
-                      <h4 className="font-bold text-[#e6961d] mb-4 text-lg">Key Deliverables:</h4>
+                      <h4 className="font-bold text-[#b45309] mb-4 text-lg">Key Deliverables:</h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {step.details.map((detail, idx) => (
                           <div key={idx} className="flex items-start bg-gray-50 p-3 rounded-lg">

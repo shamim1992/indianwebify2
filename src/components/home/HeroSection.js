@@ -99,7 +99,7 @@ const HeroSection = () => {
       {/* Content Container */}
       <div className="relative h-full min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pt-24">
         <div className="flex flex-col items-center text-center">
-          <div className="max-w-3xl mx-auto mb-16 z-10 animate-fade-in">
+          <div className="max-w-3xl mx-auto mb-16 z-10">
             <span className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm text-[#e6961d] font-medium text-sm md:text-base mb-4">
               {slides[currentSlide].subtitle}
             </span>
