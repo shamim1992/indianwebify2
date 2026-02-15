@@ -80,17 +80,19 @@ const HeroSection = () => {
           key={index}
           className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
         >
-          <Image
-            src={slide.image}
-            alt={slide.title}
-            fill
-            loading={index === 0 ? "eager" : "lazy"}
-            fetchPriority={index === 0 ? "high" : "low"}
-            className="object-cover"
-            sizes="100vw"
-            quality={75}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30" aria-hidden="true" />
+          <div className="absolute inset-0">
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "low"}
+              className="object-cover"
+              sizes="100vw"
+              quality={75}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30" aria-hidden="true" />
+          </div>
         </div>
       ))}
 
