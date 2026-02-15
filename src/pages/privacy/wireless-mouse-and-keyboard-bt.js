@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
                         <li>Ad interaction data (impressions and clicks)</li>
                     </ul>
                     <p className="text-gray-600 mb-4">
-                        This information is collected and processed by Google according to Google's Privacy Policy:
+                        This information is collected and processed by Google according to Google&apos;s Privacy Policy:
                         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#e6961d] hover:underline ml-1">
                             https://policies.google.com/privacy
                         </a>
@@ -182,7 +182,7 @@ const PrivacyPolicy = () => {
                         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 animate-fade-in-up delay-200">
                             <div className="p-8 md:p-12">
                                 <p className="text-lg text-gray-700 mb-12 leading-relaxed">
-                                    <strong>Wireless Mouse & Keyboard BT</strong> ("the App", "we", "our") respects your privacy. This Privacy Policy explains how information is handled when you use the App.
+                                    <strong>Wireless Mouse &amp; Keyboard BT</strong> (&ldquo;the App&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;) respects your privacy. This Privacy Policy explains how information is handled when you use the App.
                                 </p>
 
                                 <div className="space-y-12">
