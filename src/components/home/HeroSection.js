@@ -80,19 +80,16 @@ const HeroSection = () => {
           key={index}
           className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
         >
-          <div className="relative w-full h-full">
-            <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
-              priority={index === 0}
-              className="object-cover"
-              sizes="100vw"
-              quality={75}
-            />
-            <div className="absolute inset-0 opacity-80" aria-hidden="true" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30" aria-hidden="true" />
-          </div>
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            fill
+            priority={index === 0}
+            className="object-cover"
+            sizes="100vw"
+            quality={75}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30" aria-hidden="true" />
         </div>
       ))}
 
@@ -115,7 +112,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={slides[currentSlide].ctaLink}
-                className="px-8 py-4 bg-[#e6961d] text-white rounded-full hover:bg-[#6d123f] transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
+                className="px-8 py-4 bg-[#b45309] text-white rounded-full hover:bg-[#6d123f] transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
               >
                 <span className="mr-2 text-base font-medium">{slides[currentSlide].cta}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -123,7 +120,7 @@ const HeroSection = () => {
 
               <Link
                 href={slides[currentSlide].secondaryCtaLink}
-                className="px-8 py-4 bg-[#6d123f] backdrop-blur-sm border border-white/20 text-white rounded-full hover:bg-[#e6961d] transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-[#6d123f] backdrop-blur-sm border border-white/20 text-white rounded-full hover:bg-[#b45309] transition-all duration-300 transform hover:scale-105"
               >
                 {slides[currentSlide].secondaryCta}
               </Link>
