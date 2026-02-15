@@ -160,7 +160,7 @@ const Navbar = () => {
               </div>
             ))}
 
-            <Link href="/contact" className="ml-4 px-6 py-2 bg-[#e6961d] text-white rounded-full hover:bg-[#6d123f]/90 transition-all hover:scale-105 duration-300">
+            <Link href="/contact" className="ml-4 px-6 py-2 bg-[#b45309] text-white rounded-full hover:bg-[#6d123f] transition-all hover:scale-105 duration-300">
               Get Quote
             </Link>
           </div>

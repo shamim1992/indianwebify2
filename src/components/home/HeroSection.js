@@ -167,18 +167,20 @@ const HeroSection = () => {
           </button>
         </div>
 
-        <div className="flex items-center space-x-1 order-2 md:order-none">
+        <div className="flex items-center space-x-1 order-2 md:order-none" role="tablist" aria-label="Slides">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                currentSlide === index ? "w-8 bg-white" : "w-2 bg-white/30 hover:bg-white/60"
-              }`}
+              className={`h-6 flex items-center rounded-full transition-all duration-300`}
               aria-label={`Go to slide ${index + 1}`}
               aria-selected={currentSlide === index}
               role="tab"
-            />
+            >
+              <span className={`block h-2 rounded-full transition-all duration-300 ${
+                currentSlide === index ? "w-8 bg-white" : "w-2 bg-white/30"
+              }`} />
+            </button>
           ))}
         </div>
 
