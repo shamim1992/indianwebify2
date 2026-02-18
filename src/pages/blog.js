@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
-import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
+import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
 
 const Blog = () => {
   const blogPosts = [

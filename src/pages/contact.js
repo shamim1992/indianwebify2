@@ -3,7 +3,6 @@ import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,11 +16,6 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-
-  // Initialize EmailJS (you can also initialize this in useEffect)
-  React.useEffect(() => {
-    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'W1wyUqR3E9pp4RfSz');
-  }, []);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -47,6 +41,10 @@ const Contact = () => {
         message: formData.message,
         to_email: 'shamimakhtarsheikh@gmail.com', // Your receiving email
       };
+
+      // Dynamically import EmailJS only when the form is submitted
+      const emailjs = (await import('@emailjs/browser')).default;
+      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'W1wyUqR3E9pp4RfSz');
 
       // Send email using EmailJS
       await emailjs.send(
