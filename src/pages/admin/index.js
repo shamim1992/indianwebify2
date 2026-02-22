@@ -25,7 +25,7 @@ export default function AdminDashboard() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div>
                     <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">Dashboard Overview</h1>
-                    <p className="text-slate-500 mt-1">Here's what's happening with your IT solutions today.</p>
+                    <p className="text-slate-500 mt-1">Here&apos;s what&apos;s happening with your IT solutions today.</p>
                 </div>
                 <button className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-xl font-medium transition-all shadow-lg shadow-orange-500/20 active:scale-95 whitespace-nowrap">
                     <FileText size={18} />
@@ -121,8 +121,8 @@ export default function AdminDashboard() {
                                                 <Bell size={10} /> {activity.time}
                                             </span>
                                             <span className={`px-2 py-0.5 rounded-md font-bold uppercase tracking-wide text-[10px] ${activity.status === 'Completed' || activity.status === 'Resolved' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' :
-                                                    activity.status === 'Pending' || activity.status === 'Approved' ? 'bg-amber-50 text-amber-600 border border-amber-100' :
-                                                        'bg-red-50 text-red-600 border border-red-100'
+                                                activity.status === 'Pending' || activity.status === 'Approved' ? 'bg-amber-50 text-amber-600 border border-amber-100' :
+                                                    'bg-red-50 text-red-600 border border-red-100'
                                                 }`}>
                                                 {activity.status}
                                             </span>

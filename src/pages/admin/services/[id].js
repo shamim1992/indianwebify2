@@ -80,7 +80,7 @@ export default function ServiceDetail() {
                     {svc.features?.length > 0 && (
                         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
                             <h2 className="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
-                                <CheckSquare size={16} className="text-orange-500" /> What's Included
+                                <CheckSquare size={16} className="text-orange-500" /> What&apos;s Included
                             </h2>
                             <ul className="space-y-2.5">
                                 {svc.features.map((f, i) => (

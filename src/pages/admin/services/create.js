@@ -137,7 +137,7 @@ export default function CreateService() {
 
                         {/* Features */}
                         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
-                            <h2 className="font-bold text-slate-800 flex items-center gap-2"><CheckSquare size={16} className="text-orange-500" /> What's Included (Features)</h2>
+                            <h2 className="font-bold text-slate-800 flex items-center gap-2"><CheckSquare size={16} className="text-orange-500" /> What&apos;s Included (Features)</h2>
                             <div className="flex gap-2">
                                 <input value={featureInput} onChange={e => setFeatureInput(e.target.value)}
                                     onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addItem('features', featureInput, setFeatureInput); } }}

@@ -66,10 +66,10 @@ export default function PostDetail() {
 
     const formattedDate = post
         ? new Date(post.createdAt).toLocaleDateString('en-IN', {
-              day: '2-digit',
-              month: 'long',
-              year: 'numeric',
-          })
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric',
+        })
         : '';
 
     const readTime = post?.content
@@ -131,7 +131,7 @@ export default function PostDetail() {
                         </div>
                         <h1 className="text-3xl font-bold text-gray-800 mb-3">Article Not Found</h1>
                         <p className="text-gray-400 mb-8 max-w-sm text-sm leading-relaxed">
-                            The article you're looking for doesn't exist or may have been removed.
+                            The article you&apos;re looking for doesn&apos;t exist or may have been removed.
                         </p>
                         <Link
                             href="/posts"
@@ -320,11 +320,10 @@ export default function PostDetail() {
                                 <button
                                     onClick={handleCopyLink}
                                     title="Copy link"
-                                    className={`w-11 h-11 rounded-full border shadow-sm flex items-center justify-center transition-all hover:scale-110 ${
-                                        copied
+                                    className={`w-11 h-11 rounded-full border shadow-sm flex items-center justify-center transition-all hover:scale-110 ${copied
                                             ? 'bg-green-500 border-green-500 text-white'
                                             : 'bg-white border-gray-200 text-gray-500 hover:bg-[#6d123f] hover:text-white hover:border-[#6d123f]'
-                                    }`}
+                                        }`}
                                 >
                                     <Link2 size={15} />
                                 </button>
@@ -445,9 +444,8 @@ export default function PostDetail() {
                         </button>
                         <button
                             onClick={handleCopyLink}
-                            className={`w-9 h-9 rounded-full flex items-center justify-center transition-all ${
-                                copied ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-600'
-                            }`}
+                            className={`w-9 h-9 rounded-full flex items-center justify-center transition-all ${copied ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-600'
+                                }`}
                         >
                             <Link2 size={14} />
                         </button>
