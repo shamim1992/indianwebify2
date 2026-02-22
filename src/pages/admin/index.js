@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
+import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import AdminLayout from '../../components/admin/AdminLayout';
 import {
@@ -238,12 +239,12 @@ export default function AdminDashboard() {
                 <div className="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col relative overflow-hidden hover:shadow-md transition-shadow">
                     <div className="p-6 border-b border-slate-100 flex items-center justify-between bg-white z-10">
                         <h2 className="text-lg font-bold text-slate-900">Recent Invoices</h2>
-                        <a
+                        <Link
                             href="/admin/invoices"
                             className="text-orange-500 hover:text-orange-600 text-sm font-bold flex items-center gap-1 transition-colors group"
                         >
                             View all <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                        </a>
+                        </Link>
                     </div>
                     <div className="p-6 flex-1 overflow-y-auto">
                         {invoiceLoading ? (
