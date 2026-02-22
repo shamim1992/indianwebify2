@@ -60,15 +60,15 @@ const Navbar = () => {
       ],
     },
     { title: "Portfolio", icon: <Building2 className="h-4 w-4" />, href: "/portfolio" },
+    { title: "Blog", icon: <BookOpen className="h-4 w-4" />, href: "/posts" },
     { title: "About", icon: <Users className="h-4 w-4" />, href: "/about" },
     { title: "Contact", icon: <Phone className="h-4 w-4" />, href: "/contact" },
   ];
 
   return (
     <header
-      className={`sticky top-0 shadow w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-white backdrop-blur-md"
-      }`}
+      className={`sticky top-0 shadow w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-white backdrop-blur-md"
+        }`}
       role="banner"
     >
       <a
