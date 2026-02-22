@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
     LayoutDashboard, Users, FileText, Settings, Activity,
     Briefcase, X, Server, LogOut, BookOpen, Tag, List,
-    PlusCircle, ChevronDown, BarChart2, IndianRupee, Zap
+    PlusCircle, ChevronDown, BarChart2, IndianRupee, Zap, LayoutGrid
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -38,6 +38,16 @@ const NAV = [
     },
     {
         type: 'group',
+        name: 'Portfolio',
+        icon: LayoutGrid,
+        basePath: '/admin/portfolio',
+        children: [
+            { name: 'All Items', icon: List, href: '/admin/portfolio' },
+            { name: 'Add New', icon: PlusCircle, href: '/admin/portfolio/create' },
+        ],
+    },
+    {
+        type: 'group',
         name: 'Services',
         icon: Server,
         basePath: '/admin/services',
@@ -58,10 +68,14 @@ const NAV = [
         ],
     },
     {
-        type: 'link',
+        type: 'group',
         name: 'Invoices',
         icon: IndianRupee,
-        href: '/admin/invoices',
+        basePath: '/admin/invoices',
+        children: [
+            { name: 'All Invoices', icon: List, href: '/admin/invoices' },
+            { name: 'New Invoice', icon: PlusCircle, href: '/admin/invoices/create' },
+        ],
     },
     {
         type: 'link',
@@ -95,8 +109,8 @@ function AccordionGroup({ group, router }) {
             <button
                 onClick={() => setOpen(o => !o)}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${isGroupActive
-                        ? 'bg-orange-50 text-orange-600'
-                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                    ? 'bg-orange-50 text-orange-600'
+                    : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                     }`}
             >
                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isGroupActive ? 'bg-orange-100' : 'bg-slate-100 group-hover:bg-slate-200'
@@ -141,8 +155,8 @@ function AccordionGroup({ group, router }) {
                                 key={child.href}
                                 href={child.href}
                                 className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-all ${childActive
-                                        ? 'bg-orange-50 text-orange-600'
-                                        : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800'
+                                    ? 'bg-orange-50 text-orange-600'
+                                    : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800'
                                     }`}
                             >
                                 <ChildIcon
@@ -173,8 +187,8 @@ function StandaloneLink({ item, router }) {
         <Link
             href={item.href}
             className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${isActive
-                    ? 'bg-orange-50 text-orange-600'
-                    : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                ? 'bg-orange-50 text-orange-600'
+                : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                 }`}
         >
             <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive ? 'bg-orange-100' : 'bg-slate-100'

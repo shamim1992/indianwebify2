@@ -11,6 +11,22 @@ const PortfolioSection = dynamic(() => import('@/components/home/PortfolioSectio
 const ProcessSection = dynamic(() => import('@/components/home/ProcessSection'))
 const FooterSection = dynamic(() => import('@/components/footer/FooterSection'))
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Indian Webify',
+  url: 'https://indianwebify.com',
+  description: 'Transform your business with Indian Webify\'s professional website development, app development, AI solutions, digital marketing, and research projects.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://indianwebify.com/posts?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 const Home = () => {
   return (
     <>
@@ -20,6 +36,7 @@ const Home = () => {
         keywords="website development, app development, AI development, digital marketing, web design, mobile apps, ecommerce development, custom websites, Indian Webify"
         url="/"
         image="/indianwebify.png"
+        jsonLd={websiteJsonLd}
       />
       <div>
         <Navbar/>

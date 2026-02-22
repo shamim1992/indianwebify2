@@ -99,6 +99,7 @@ export default function PostDetail() {
     if (loading) {
         return (
             <div className="min-h-screen bg-gray-50">
+                <SEO title="Loading Article - Indian Webify" noindex={true} />
                 <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50" />
                 <Navbar />
                 <div className="h-[70vh] bg-gray-200 animate-pulse" />
@@ -147,6 +148,50 @@ export default function PostDetail() {
     }
 
     /* ── Post ── */
+    const postUrl = `https://indianwebify.com/posts/${post.slug}`;
+    const postImage = post.coverImage || 'https://indianwebify.com/indianwebify.png';
+
+    const articleJsonLd = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'Article',
+                headline: post.title,
+                description: post.excerpt || post.title,
+                image: [postImage],
+                datePublished: post.createdAt,
+                dateModified: post.updatedAt || post.createdAt,
+                author: {
+                    '@type': 'Person',
+                    name: post.author?.name || 'Indian Webify',
+                },
+                publisher: {
+                    '@type': 'Organization',
+                    name: 'Indian Webify',
+                    logo: {
+                        '@type': 'ImageObject',
+                        url: 'https://indianwebify.com/logo2.png',
+                    },
+                },
+                mainEntityOfPage: {
+                    '@type': 'WebPage',
+                    '@id': postUrl,
+                },
+                url: postUrl,
+                ...(post.category?.name && { articleSection: post.category.name }),
+                ...(post.tags?.length > 0 && { keywords: post.tags.join(', ') }),
+            },
+            {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://indianwebify.com' },
+                    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://indianwebify.com/posts' },
+                    { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
+                ],
+            },
+        ],
+    };
+
     return (
         <>
             <SEO
@@ -155,6 +200,13 @@ export default function PostDetail() {
                 keywords={post.tags?.join(', ')}
                 url={`/posts/${post.slug}`}
                 image={post.coverImage || '/indianwebify.png'}
+                type="article"
+                publishedTime={post.createdAt}
+                modifiedTime={post.updatedAt || post.createdAt}
+                articleAuthor={post.author?.name || 'Indian Webify'}
+                articleSection={post.category?.name}
+                articleTags={post.tags}
+                jsonLd={articleJsonLd}
             />
 
             {/* Reading Progress Bar */}
@@ -188,7 +240,7 @@ export default function PostDetail() {
                         <div className="container mx-auto max-w-4xl">
 
                             {/* Breadcrumb */}
-                            <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-5 flex-wrap">
+                            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-white/50 mb-5 flex-wrap">
                                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
                                 <ChevronRight size={11} />
                                 <Link href="/posts" className="hover:text-white transition-colors">Blog</Link>

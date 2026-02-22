@@ -85,6 +85,22 @@ export default function PostsPage() {
             ? `${Math.max(1, Math.ceil(content.split(/\s+/).length / 200))} min read`
             : '5 min read';
 
+    const blogJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'Blog & Articles - Indian Webify',
+        description: 'Explore our latest blog posts on web development, AI, digital marketing, design trends, and technology insights from Indian Webify experts.',
+        url: 'https://indianwebify.com/posts',
+        publisher: {
+            '@type': 'Organization',
+            name: 'Indian Webify',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://indianwebify.com/logo2.png',
+            },
+        },
+    };
+
     return (
         <>
             <SEO
@@ -93,6 +109,7 @@ export default function PostsPage() {
                 keywords="web development blog, AI technology, digital marketing tips, web design, app development, technology articles, Indian Webify blog"
                 url="/posts"
                 image="/indianwebify.png"
+                jsonLd={blogJsonLd}
             />
             <div className="min-h-screen bg-gray-50">
                 <Navbar />

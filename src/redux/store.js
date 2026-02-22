@@ -5,6 +5,8 @@ import authReducer from './slices/authSlice';
 import projectReducer from './slices/projectSlice';
 import serviceReducer from './slices/serviceSlice';
 import blogReducer from './slices/blogSlice';
+import portfolioReducer from './slices/portfolioSlice';
+import invoiceReducer from './slices/invoiceSlice';
 
 const authPersistConfig = {
     key: 'auth',
@@ -20,6 +22,8 @@ export const store = configureStore({
         project: projectReducer,
         service: serviceReducer,
         blog: blogReducer,
+        portfolio: portfolioReducer,
+        invoice: invoiceReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
