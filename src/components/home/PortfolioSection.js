@@ -36,7 +36,9 @@ const PortfolioSection = () => {
           setError(data.message || 'Failed to load projects');
         }
       } catch (err) {
-        console.error('Error fetching portfolios:', err);
+        // Use console.log or handle the error string instead of the Error object 
+        // to prevent Next.js Dev Overlay from catching it as an unhandled runtime error.
+        console.warn('Error fetching portfolios:', err.message);
         setError('Error fetching portfolios. Please try again later.');
       } finally {
         setIsLoading(false);
