@@ -30,8 +30,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        {/* Preload the logo used in Navbar on every page */}
-        <link rel="preload" href="/logo2.png" as="image" type="image/png" />
         {/* DNS prefetch for EmailJS (used on contact page) */}
         <link rel="dns-prefetch" href="https://api.emailjs.com" />
         {/* Organization structured data — present on every page */}
