@@ -160,7 +160,7 @@ export default function ProjectManagement() {
                                             <td className="px-6 py-4">
                                                 <div className="flex items-center gap-3">
                                                     {project.coverImage ? (
-                                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                        // eslint-disable-next-line @next/next/no-img-element
                                                         <img src={project.coverImage} alt={project.title} className="w-10 h-10 rounded-lg object-cover border border-slate-100 shrink-0" />
                                                     ) : (
                                                         <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center shrink-0">

@@ -186,7 +186,7 @@ export default function CreateService() {
                             <label className="block cursor-pointer">
                                 <div className={`border-2 border-dashed rounded-xl flex flex-col items-center justify-center text-center transition-all h-40 overflow-hidden ${imagePreview ? 'border-orange-300' : 'border-slate-200 bg-slate-50 hover:border-orange-300 hover:bg-orange-50/30'}`}>
                                     {imagePreview ? (
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        // eslint-disable-next-line @next/next/no-img-element
                                         <img src={imagePreview} alt="Preview" className="w-full h-full object-cover" />
                                     ) : (
                                         <><ImageIcon size={26} className="text-slate-300 mb-2" /><p className="text-sm text-slate-500 font-medium">Click to upload</p><p className="text-xs text-slate-400 mt-1">PNG, JPG, WebP up to 5MB</p></>

@@ -199,7 +199,7 @@ export default function EditPortfolioItem() {
                             <label className="block cursor-pointer">
                                 <div className={`border-2 border-dashed rounded-xl flex flex-col items-center justify-center text-center transition-all h-44 overflow-hidden ${imagePreview ? 'border-orange-300' : 'border-slate-200 bg-slate-50 hover:border-orange-300'}`}>
                                     {imagePreview ? (
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        // eslint-disable-next-line @next/next/no-img-element
                                         <img src={imagePreview} alt="Preview" className="w-full h-full object-cover" />
                                     ) : (
                                         <>

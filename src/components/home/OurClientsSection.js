@@ -121,9 +121,11 @@ const OurClientsSection = () => {
                     key={client.id}
                     className="flex-shrink-0 snap-center w-64 h-32 flex items-center justify-center bg-white border border-gray-100 rounded-lg p-4 shadow mx-2"
                   >
-                    <img
+                    <Image
                       src={client.logo}
                       alt={`${client.name} Logo`}
+                      width={160}
+                      height={96}
                       className="max-h-24 max-w-full object-contain"
                     />
                   </div>
