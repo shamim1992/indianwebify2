@@ -263,6 +263,7 @@ export default function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
                 <div className="p-4 border-t border-slate-100 shrink-0">
                     <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200/60 hover:bg-slate-100 transition-colors">
                         <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 ring-2 ring-orange-200">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 src={`https://ui-avatars.com/api/?name=${encodeURIComponent(user?.name || 'Admin')}&background=f97316&color=fff&bold=true`}
                                 alt="Avatar"

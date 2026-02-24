@@ -3,6 +3,7 @@ import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
 import { Users, Target, Award, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const About = () => {
   const values = [
@@ -103,7 +104,7 @@ const About = () => {
             </div>
             <div className="relative animate-fade-in-up">
               <div className="w-full h-96 bg-gray-200 rounded-lg relative overflow-hidden shadow-lg">
-                <img src="/indianwebify.png" alt="Indian Webify Team" className="w-full h-full object-cover" />
+                <Image src="/indianwebify.png" alt="Indian Webify Team" fill className="object-cover" />
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@ import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
 import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 const Blog = () => {
   const blogPosts = [
@@ -115,10 +116,11 @@ const Blog = () => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               <div className="relative h-64 lg:h-full">
-                <img
+                <Image
                   src={blogPosts[0].image}
                   alt={blogPosts[0].title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="bg-[#e6961d] text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -179,10 +181,11 @@ const Blog = () => {
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fade-in-up"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-[#e6961d] text-white px-3 py-1 rounded-full text-sm font-semibold">

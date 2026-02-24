@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Star, Quote, ChevronLeft, ChevronRight, Award, Users, ThumbsUp } from 'lucide-react';
 import useInView from '@/hooks/useInView';
+import Image from 'next/image';
 
 const OurClientsSection = () => {
   const clientLogos = [
@@ -101,9 +102,11 @@ const OurClientsSection = () => {
                   key={client.id}
                   className="h-32 flex items-center justify-center bg-white border border-gray-100 rounded-lg p-4 shadow hover:scale-105 hover:-translate-y-1 transition-transform duration-300"
                 >
-                  <img
+                  <Image
                     src={client.logo}
                     alt={`${client.name} Logo`}
+                    width={160}
+                    height={96}
                     className="max-h-24 max-w-full object-contain"
                   />
                 </div>

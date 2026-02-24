@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import {
-    ArrowLeft, Save, Send, BookOpen, Tag, Image, AlignLeft, FileText, Loader2
+    ArrowLeft, Save, Send, BookOpen, Tag, Image as ImageIcon, AlignLeft, FileText, Loader2
 } from 'lucide-react';
 import { API_URL } from '../../../../apiUrl';
 
@@ -277,7 +277,7 @@ export default function EditBlog() {
                     {/* Cover Image */}
                     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
                         <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-3">
-                            <Image size={16} className="text-orange-500" />
+                            <ImageIcon size={16} className="text-orange-500" />
                             Cover Image URL
                         </label>
                         <input
@@ -290,6 +290,7 @@ export default function EditBlog() {
                         />
                         {form.coverImage && (
                             <div className="mt-3 rounded-xl overflow-hidden border border-slate-100 aspect-video w-full">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={form.coverImage}
                                     alt="Cover preview"

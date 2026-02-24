@@ -62,6 +62,7 @@ export default function ServiceDetail() {
                     {/* Cover Image */}
                     {svc.coverImage && (
                         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src={svc.coverImage} alt={svc.title} className="w-full h-56 object-cover" />
                         </div>
                     )}

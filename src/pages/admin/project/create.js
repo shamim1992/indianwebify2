@@ -200,6 +200,7 @@ export default function CreateProject() {
                             <label className="block cursor-pointer">
                                 <div className={`border-2 border-dashed rounded-xl flex flex-col items-center justify-center text-center transition-all h-44 ${imagePreview ? 'border-orange-300 bg-orange-50/50' : 'border-slate-200 bg-slate-50 hover:border-orange-300 hover:bg-orange-50/30'}`}>
                                     {imagePreview ? (
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img src={imagePreview} alt="Preview" className="w-full h-full object-cover rounded-xl" />
                                     ) : (
                                         <>

@@ -5,6 +5,7 @@ import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
 import { Calendar, User, ArrowRight, Clock, Search, Tag, ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
 import { API_URL } from '../../apiUrl';
+import Image from 'next/image';
 
 const LIMIT = 9;
 
@@ -236,10 +237,11 @@ export default function PostsPage() {
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                                     <div className="relative h-64 lg:h-full">
                                         {featuredPost.coverImage ? (
-                                            <img
+                                            <Image
                                                 src={featuredPost.coverImage}
                                                 alt={featuredPost.title}
-                                                className="w-full h-full object-cover"
+                                                fill
+                                                className="object-cover"
                                             />
                                         ) : (
                                             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#6d123f]/10 to-[#e6961d]/10">
@@ -319,10 +321,11 @@ export default function PostsPage() {
                                     >
                                         <div className="relative h-48 overflow-hidden">
                                             {post.coverImage ? (
-                                                <img
+                                                <Image
                                                     src={post.coverImage}
                                                     alt={post.title}
-                                                    className="w-full h-full object-cover"
+                                                    fill
+                                                    className="object-cover"
                                                 />
                                             ) : (
                                                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#6d123f]/10 to-[#e6961d]/10">

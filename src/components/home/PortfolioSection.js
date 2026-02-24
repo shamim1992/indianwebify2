@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import useInView from '@/hooks/useInView';
 import { API_URL } from '@/apiUrl';
+import Image from 'next/image';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -148,7 +149,7 @@ const PortfolioSection = () => {
                   <div className="bg-white rounded-xl shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 group-hover:shadow-2xl border border-gray-100">
                     <div className="relative h-48 overflow-hidden bg-gray-100 flex-shrink-0">
                       {project.thumbnail ? (
-                        <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <Image src={project.thumbnail} alt={project.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-[#6d123f] to-[#e6961d] text-white transition-transform duration-500 group-hover:scale-105">
                           <span className="text-xl font-semibold text-center px-4">{project.title}</span>
@@ -221,7 +222,7 @@ const PortfolioSection = () => {
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-5xl w-full max-h-[90vh] overflow-y-auto animate-scale-in" onClick={(e) => e.stopPropagation()}>
             <div className="relative h-64 md:h-80 bg-gradient-to-r from-[#6d123f] to-[#e6961d] overflow-hidden">
               {selectedProject.thumbnail && (
-                <img src={selectedProject.thumbnail} alt={selectedProject.title} className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" />
+                <Image src={selectedProject.thumbnail} alt={selectedProject.title} fill className="object-cover opacity-30 mix-blend-overlay" />
               )}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center z-10">
                 <div className="w-20 h-20 rounded-full bg-white bg-opacity-20 backdrop-blur-sm flex items-center justify-center mb-5 border-2 border-white/30">

@@ -3,6 +3,7 @@ import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPortfolios } from '../redux/actions/portfolioActions';
 import {
@@ -149,7 +150,7 @@ const Portfolio = () => {
                     {/* Image */}
                     <div className="relative h-48 overflow-hidden bg-gray-100">
                       {item.thumbnail ? (
-                        <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <Image src={item.thumbnail} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#6d123f]/10 to-[#e6961d]/10">
                           <LayoutGrid className="w-12 h-12 text-[#6d123f]/30" />

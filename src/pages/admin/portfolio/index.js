@@ -151,6 +151,7 @@ export default function AdminPortfolioList() {
                                 <div key={item._id} className="group rounded-2xl border border-slate-200 overflow-hidden hover:shadow-md transition-all hover:-translate-y-0.5">
                                     <div className="relative h-44 bg-slate-100 overflow-hidden">
                                         {item.thumbnail ? (
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
                                             <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                         ) : (
                                             <div className="w-full h-full flex items-center justify-center">
@@ -218,6 +219,7 @@ export default function AdminPortfolioList() {
                                             <td className="px-6 py-4">
                                                 <div className="flex items-center gap-3">
                                                     {item.thumbnail ? (
+                                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                                         <img src={item.thumbnail} alt={item.title} className="w-10 h-10 rounded-lg object-cover shrink-0" />
                                                     ) : (
                                                         <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center shrink-0">

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
+import Image from 'next/image';
 import {
     Calendar, Clock, ArrowLeft, Tag, BookOpen,
     ChevronRight, Link2, ArrowUp
@@ -223,10 +224,11 @@ export default function PostDetail() {
                 {/* ── Hero ── */}
                 <section className="relative w-full h-[45vh] min-h-[320px] overflow-hidden">
                     {post.coverImage ? (
-                        <img
+                        <Image
                             src={post.coverImage}
                             alt={post.title}
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
                         />
                     ) : (
                         <div className="w-full h-full bg-gradient-to-br from-[#6d123f] via-[#9b1957] to-[#3a0821]" />
@@ -437,10 +439,11 @@ export default function PostDetail() {
                                         >
                                             <div className="h-48 bg-gray-100 overflow-hidden relative">
                                                 {related.coverImage ? (
-                                                    <img
+                                                    <Image
                                                         src={related.coverImage}
                                                         alt={related.title}
-                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                        fill
+                                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                                                     />
                                                 ) : (
                                                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#6d123f]/10 to-[#e6961d]/10">

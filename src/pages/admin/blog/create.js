@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import {
-    ArrowLeft, Save, Send, BookOpen, Tag, Image, AlignLeft,
+    ArrowLeft, Save, Send, BookOpen, Tag, Image as ImageIcon, AlignLeft,
     FileText, Loader2, UploadCloud, X
 } from 'lucide-react';
 import { API_URL } from '../../../apiUrl';
@@ -332,13 +332,14 @@ export default function CreateBlog() {
                     {/* ── Cover Image ─────────────────────────────────────────── */}
                     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
                         <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-3">
-                            <Image size={16} className="text-orange-500" />
+                            <ImageIcon size={16} className="text-orange-500" />
                             Cover Image
                         </label>
 
                         {/* Preview */}
                         {coverPreview ? (
                             <div className="relative rounded-xl overflow-hidden border border-slate-200 aspect-video w-full mb-3 group">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={coverPreview}
                                     alt="Cover preview"

@@ -3,6 +3,7 @@ import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { fetchPortfolioById } from '../../redux/actions/portfolioActions';
@@ -121,7 +122,7 @@ export default function PortfolioDetail() {
                                 {/* Thumbnail */}
                                 {item.thumbnail && (
                                     <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
-                                        <img src={item.thumbnail} alt={item.title} className="w-full object-cover max-h-[420px]" />
+                                        <Image src={item.thumbnail} alt={item.title} width={800} height={420} className="w-full object-cover max-h-[420px]" />
                                     </div>
                                 )}
 

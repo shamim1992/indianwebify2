@@ -148,6 +148,7 @@ export default function ServiceManagement() {
                                             <td className="px-6 py-4">
                                                 <div className="flex items-center gap-3">
                                                     {svc.coverImage ? (
+                                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                                         <img src={svc.coverImage} alt={svc.title} className="w-10 h-10 rounded-lg object-cover border border-slate-100 shrink-0" />
                                                     ) : (
                                                         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center shrink-0 text-lg">
