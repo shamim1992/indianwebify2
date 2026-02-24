@@ -57,7 +57,7 @@ export default function AdminPortfolioDetail() {
                     </div>
                 </div>
                 <div className="flex items-center gap-2">
-                    <Link href={`/portfolio/${id}`} target="_blank"
+                    <Link href={`/portfolio/${item?.slug || id}`} target="_blank"
                         className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-violet-600 border border-slate-200 hover:border-violet-300 px-4 py-2 rounded-xl transition-all bg-white">
                         <Eye size={14} /> Public View
                     </Link>
@@ -188,7 +188,7 @@ export default function AdminPortfolioDetail() {
                             className="flex items-center gap-2 w-full text-sm font-medium text-slate-700 hover:text-orange-600 hover:bg-orange-50 px-4 py-2.5 rounded-xl border border-slate-200 hover:border-orange-200 transition-all">
                             <Pencil size={14} className="text-orange-500" /> Edit Item
                         </Link>
-                        <Link href={`/portfolio/${id}`} target="_blank"
+                        <Link href={`/portfolio/${item?.slug || id}`} target="_blank"
                             className="flex items-center gap-2 w-full text-sm font-medium text-slate-700 hover:text-violet-600 hover:bg-violet-50 px-4 py-2.5 rounded-xl border border-slate-200 hover:border-violet-200 transition-all">
                             <Eye size={14} className="text-violet-400" /> View on Public Site
                         </Link>

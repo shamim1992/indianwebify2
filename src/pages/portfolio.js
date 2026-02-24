@@ -157,7 +157,7 @@ const Portfolio = () => {
                       )}
                       {/* Hover overlay */}
                       <div className="absolute inset-0 bg-[#6d123f]/70 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Link href={`/portfolio/${item._id}`}
+                        <Link href={`/portfolio/${item.slug || item._id}`}
                           className="bg-white text-[#6d123f] px-4 py-2 rounded-full text-sm font-bold flex items-center gap-1.5 hover:bg-gray-100 transition-colors">
                           <ArrowRight className="w-4 h-4" /> Details
                         </Link>
@@ -199,7 +199,7 @@ const Portfolio = () => {
                         {item.clientName && (
                           <span className="text-xs text-gray-400 font-medium truncate max-w-[120px]">{item.clientName}</span>
                         )}
-                        <Link href={`/portfolio/${item._id}`} className="ml-auto flex items-center gap-1 text-xs font-bold text-[#6d123f] hover:text-[#e6961d] transition-colors">
+                        <Link href={`/portfolio/${item.slug}`} className="ml-auto flex items-center gap-1 text-xs font-bold text-[#6d123f] hover:text-[#e6961d] transition-colors">
                           View Details <ArrowRight className="w-3.5 h-3.5" />
                         </Link>
                       </div>

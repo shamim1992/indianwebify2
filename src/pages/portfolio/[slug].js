@@ -14,14 +14,14 @@ const fmt = (d) =>
 
 export default function PortfolioDetail() {
     const router = useRouter();
-    const { id } = router.query;
+    const { slug } = router.query;
     const dispatch = useDispatch();
     const { currentPortfolio: item, loading } = useSelector((s) => s.portfolio);
 
     useEffect(() => {
-        if (id) dispatch(fetchPortfolioById(id));
+        if (slug) dispatch(fetchPortfolioById(slug));
         return () => { dispatch(clearCurrentPortfolio()); };
-    }, [id, dispatch]);
+    }, [slug, dispatch]);
 
     if (loading || !item) {
         return (
@@ -56,7 +56,7 @@ export default function PortfolioDetail() {
                 title={`${item.title} — Portfolio | Indian Webify`}
                 description={item.excerpt || item.description || `${item.title} — a portfolio item by IndianWebify.`}
                 keywords={`IndianWebify, ${item.category || ''}, ${(item.technologies || []).join(', ')}`}
-                url={`/portfolio/${id}`}
+                url={`/portfolio/${slug}`}
                 image={item.thumbnail || '/indianwebify.png'}
             />
             <div className="min-h-screen bg-gray-50">
