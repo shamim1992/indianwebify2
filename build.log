@@ -1,0 +1,74 @@
+
+> indianwebify2@0.1.0 build
+> next build
+
+   ▲ Next.js 15.2.4
+
+   Linting and checking validity of types ...
+ ⨯ ESLint: Failed to load parser '@typescript-eslint/parser' declared in ' » eslint-config-next/core-web-vitals » /Users/shamimsheikh/Documents/web/IndianWebify/indianwebify2/node_modules/eslint-config-next/index.js#overrides[0]': Cannot find module 'typescript' Require stack: - /Users/shamimsheikh/Documents/web/IndianWebify/indianwebify2/node_modules/@typescript-eslint/typescript-estree/dist/create-program/getWatchProgramsForProjects.js - /Users/shamimsheikh/Documents/web/IndianWebify/indianwebify2/node_modules/@typescript-eslint/typescript-estree/dist/clear-caches.js - /Users/shamimsheikh/Documents/web/IndianWebify/indianwebify2/node_modules/@typescript-eslint/typescript-estree/dist/index.js - /Users/shamimsheikh/Documents/web/IndianWebify/indianwebify2/node_modules/@typescript-eslint/parser/dist/parser.js - /Users/shamimsheikh/Documents/web/IndianWebify/indianwebify2/node_modules/@typescript-eslint/parser/dist/index.js - /Users/shamimsheikh/Documents/web/IndianWebify/indianwebify2/node_modules/@eslint/eslintrc/lib/config-array-factory.js
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Collecting page data ...
+   Generating static pages (0/40) ...
+   Generating static pages (10/40) 
+   Generating static pages (20/40) 
+   Generating static pages (30/40) 
+ ✓ Generating static pages (40/40)
+   Finalizing page optimization ...
+   Collecting build traces ...
+   Exporting (0/40) ...
+   Exporting (10/40) 
+   Exporting (20/40) 
+   Exporting (30/40) 
+ ✓ Exporting (40/40)
+
+Route (pages)                                   Size  First Load JS
+┌ ○ /                                        4.93 kB         146 kB
+├   /_app                                        0 B         131 kB
+├ ○ /404                                     1.48 kB         147 kB
+├ ○ /about                                   2.59 kB         148 kB
+├ ○ /admin                                   3.59 kB         142 kB
+├ ○ /admin/blog                              3.72 kB         142 kB
+├ ○ /admin/blog/categories                   3.78 kB         142 kB
+├ ○ /admin/blog/create                       4.06 kB         142 kB
+├ ○ /admin/blog/edit/[id]                    3.18 kB         141 kB
+├ ○ /admin/invoices                          4.02 kB         142 kB
+├ ○ /admin/invoices/[id]                     4.02 kB         142 kB
+├ ○ /admin/invoices/create                   4.02 kB         142 kB
+├ ○ /admin/invoices/edit/[id]                4.09 kB         142 kB
+├ ○ /admin/portfolio                         4.37 kB         142 kB
+├ ○ /admin/portfolio/[id]                    3.38 kB         141 kB
+├ ○ /admin/portfolio/create                  3.96 kB         142 kB
+├ ○ /admin/portfolio/edit/[id]               4.01 kB         142 kB
+├ ○ /admin/project                              4 kB         142 kB
+├ ○ /admin/project/[id]                      3.31 kB         141 kB
+├ ○ /admin/project/create                    4.12 kB         142 kB
+├ ○ /admin/project/edit/[id]                  4.2 kB         142 kB
+├ ○ /admin/services                          4.01 kB         142 kB
+├ ○ /admin/services/[id]                      2.9 kB         141 kB
+├ ○ /admin/services/create                   4.15 kB         142 kB
+├ ○ /admin/services/edit/[id]                4.17 kB         142 kB
+├ ○ /auth/login                               1.2 kB         134 kB
+├ ○ /auth/register                           1.33 kB         134 kB
+├ ○ /blog                                    2.66 kB         148 kB
+├ ○ /contact                                 2.84 kB         148 kB
+├ ○ /portfolio                               3.82 kB         149 kB
+├ ○ /portfolio/[slug]                        3.41 kB         149 kB
+├ ○ /posts                                   4.02 kB         149 kB
+├ ○ /posts/[slug]                            5.25 kB         150 kB
+├ ○ /privacy/wireless-mouse-and-keyboard-bt   3.4 kB         149 kB
+├ ○ /services/ai-development                 3.07 kB         148 kB
+├ ○ /services/app-development                3.13 kB         148 kB
+├ ○ /services/digital-marketing              2.72 kB         148 kB
+├ ○ /services/other-services                 3.15 kB         148 kB
+├ ○ /services/research-projects              2.93 kB         148 kB
+└ ○ /services/website-development            3.28 kB         148 kB
++ First Load JS shared by all                 142 kB
+  ├ chunks/framework-f1968f95cccbbbac.js     57.7 kB
+  ├ chunks/main-d151d058fc555af0.js          33.9 kB
+  ├ chunks/pages/_app-d61c51820647c79f.js    37.4 kB
+  ├ css/d26d9742a0444ec4.css                 11.6 kB
+  └ other shared chunks (total)              1.69 kB
+
+○  (Static)  prerendered as static content
+
