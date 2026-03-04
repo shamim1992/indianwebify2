@@ -39,7 +39,7 @@ const FooterSection = () => {
     { name: 'Research Projects', url: '/services/research-projects' },
     { name: 'Digital Marketing', url: '/services/digital-marketing' },
     { name: 'E-commerce Solutions', url: '/services/ecommerce' },
-    { name: 'UI/UX Design', url: '/services/ui-ux-design' }
+    { name: 'Tools', url: '/tools' }
   ];
 
   const recentPosts = [
@@ -50,7 +50,7 @@ const FooterSection = () => {
 
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-[#16071f] text-gray-100 pt-16 overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div classNDesigname="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#6d123f] opacity-10"></div>
         <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-[#e6961d] opacity-5"></div>
       </div>
