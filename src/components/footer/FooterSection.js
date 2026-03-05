@@ -26,9 +26,8 @@ const FooterSection = () => {
   const quickLinks = [
     { name: 'Home', url: '/' },
     { name: 'About Us', url: '/about' },
-    { name: 'Services', url: '/services' },
     { name: 'Portfolio', url: '/portfolio' },
-    { name: 'Blog', url: '/blog' },
+    { name: 'Blog', url: '/posts' },
     { name: 'Contact', url: '/contact' }
   ];
 
@@ -38,14 +37,14 @@ const FooterSection = () => {
     { name: 'AI Development', url: '/services/ai-development' },
     { name: 'Research Projects', url: '/services/research-projects' },
     { name: 'Digital Marketing', url: '/services/digital-marketing' },
-    { name: 'E-commerce Solutions', url: '/services/ecommerce' },
+    { name: 'Other Services', url: '/services/other-services' },
     { name: 'Tools', url: '/tools' }
   ];
 
   const recentPosts = [
-    { title: 'Top 10 Web Design Trends in 2025', date: 'March 28, 2025', url: '/blog/web-design-trends-2025' },
-    { title: 'How AI is Transforming App Development', date: 'March 15, 2025', url: '/blog/ai-transforming-app-development' },
-    { title: 'Essential SEO Strategies for Small Businesses', date: 'March 02, 2025', url: '/blog/seo-strategies-small-businesses' }
+    { title: 'Top 10 Web Design Trends in 2025', date: 'March 28, 2025', url: '/posts/web-design-trends-2025' },
+    { title: 'How AI is Transforming App Development', date: 'March 15, 2025', url: '/posts/ai-transforming-app-development' },
+    { title: 'Essential SEO Strategies for Small Businesses', date: 'March 02, 2025', url: '/posts/seo-strategies-small-businesses' }
   ];
 
   return (
@@ -142,7 +141,7 @@ const FooterSection = () => {
                 </Link>
               ))}
             </div>
-            <Link href="/blog" className="inline-flex items-center text-[#e6961d] mt-4 hover:text-white transition-colors duration-300">
+            <Link href="/posts" className="inline-flex items-center text-[#e6961d] mt-4 hover:text-white transition-colors duration-300">
               View all posts <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
