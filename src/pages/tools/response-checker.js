@@ -3,6 +3,7 @@ import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
 import { MonitorSmartphone, Search, Smartphone, Tablet, Laptop, Monitor, Maximize } from 'lucide-react';
+import { API_URL } from '@/apiUrl';
 
 const ResponseChecker = () => {
     const [urlInput, setUrlInput] = useState('');
@@ -25,7 +26,9 @@ const ResponseChecker = () => {
         if (formattedUrl && !/^https?:\/\//i.test(formattedUrl)) {
             formattedUrl = 'https://' + formattedUrl;
         }
-        setActiveUrl(formattedUrl);
+
+        // Use the backend proxy to bypass X-Frame-Options
+        setActiveUrl(`${API_URL}/api/proxy?url=${encodeURIComponent(formattedUrl)}`);
     };
 
     const handleDeviceChange = (device) => {
