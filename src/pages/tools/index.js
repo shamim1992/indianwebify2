@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Pipette, Code2, Layers } from 'lucide-react';
+import { Pipette, Code2, Layers, MonitorSmartphone } from 'lucide-react';
 import Navbar from '@/components/header/Navbar';
 import FooterSection from '@/components/footer/FooterSection';
 import SEO from '@/components/SEO';
@@ -18,6 +18,12 @@ const tools = [
         description: 'Generate beautiful soft UI CSS code. Create custom neumorphic designs with customizable shadows and shapes.',
         link: '/tools/neumorphism',
         icon: <Layers className="text-5xl mb-4" />
+    },
+    {
+        title: 'Responsiveness Checker',
+        description: 'Test your website layout across different device screen sizes. Ensure your site looks great on mobile, tablet, and desktop.',
+        link: '/tools/response-checker',
+        icon: <MonitorSmartphone className="text-5xl mb-4" />
     }
 ];
 
