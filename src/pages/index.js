@@ -39,14 +39,14 @@ const Home = () => {
         jsonLd={websiteJsonLd}
       />
       <div>
-        <Navbar/>
-        <HeroSection/>
-        <ServicesSection/>
+        <Navbar />
+        <HeroSection />
+        {/* <ServicesSection/>
         <WhyChooseUsSection />
         <AboutUsSection/>
         <PortfolioSection/>
-        <ProcessSection/>
-        <FooterSection/>
+        <ProcessSection/> */}
+        <FooterSection />
       </div>
     </>
   )

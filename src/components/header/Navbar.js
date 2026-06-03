@@ -47,20 +47,20 @@ const Navbar = () => {
 
   const menuItems = [
     { title: "Home", icon: <Home className="h-4 w-4" />, href: "/" },
-    {
-      title: "Services",
-      icon: <BookOpen className="h-4 w-4" />,
-      submenu: [
-        { title: "Website Development", href: "/services/website-development" },
-        { title: "App Development", href: "/services/app-development" },
-        { title: "AI Development", href: "/services/ai-development" },
-        { title: "Research Projects", href: "/services/research-projects" },
-        { title: "Digital Marketing", href: "/services/digital-marketing" },
-        { title: "Other Services", href: "/services/other-services" },
-      ],
-    },
-    { title: "Portfolio", icon: <Building2 className="h-4 w-4" />, href: "/portfolio" },
-    { title: "Blog", icon: <BookOpen className="h-4 w-4" />, href: "/posts" },
+    // {
+    //   title: "Services",
+    //   icon: <BookOpen className="h-4 w-4" />,
+    //   submenu: [
+    //     { title: "Website Development", href: "/services/website-development" },
+    //     { title: "App Development", href: "/services/app-development" },
+    //     { title: "AI Development", href: "/services/ai-development" },
+    //     { title: "Research Projects", href: "/services/research-projects" },
+    //     { title: "Digital Marketing", href: "/services/digital-marketing" },
+    //     { title: "Other Services", href: "/services/other-services" },
+    //   ],
+    // },
+    // { title: "Portfolio", icon: <Building2 className="h-4 w-4" />, href: "/portfolio" },
+    // { title: "Blog", icon: <BookOpen className="h-4 w-4" />, href: "/posts" },
     { title: "About", icon: <Users className="h-4 w-4" />, href: "/about" },
     { title: "Contact", icon: <Phone className="h-4 w-4" />, href: "/contact" },
   ];
